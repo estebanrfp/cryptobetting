@@ -1,6 +1,3 @@
-// const path = require('path')
-// const CleanWebpackPlugin = require('clean-webpack-plugin')
-// const HtmlWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const OfflinePlugin = require('offline-plugin')
 
@@ -11,25 +8,12 @@ module.exports = {
       'babel-polyfill'
     ]
   },
-  // plugins: [
-  //   new CleanWebpackPlugin(['dist']),
-  //   new HtmlWebpackPlugin({
-  //     title: 'Production'
-  //   })
-  // ],
-  // output: {
-  //   path: path.resolve(__dirname, 'dist'),
-  //   filename: '[name].[hash].js',
-  //   publicPath: '/',
-  //   chunkFilename: '[name].[hash].js'
-  // }
   plugins: [
     new OfflinePlugin({
       publicPath: '/',
       appShell: '/',
       externals: [
         '/'
-        // 'https://desarrolloactivo.ams3.cdn.digitaloceanspaces.com/fonts/material-icons/Material-Design-Iconic-Font.woff2?v=2.2.0'
       ],
       ServiceWorker: {
         events: true
