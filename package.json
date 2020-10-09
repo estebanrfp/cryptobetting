@@ -1,7 +1,7 @@
 {
   "name": "cryptobetting",
   "version": "0.1.0",
-  "description": "Default template for dapp Aplications",
+  "description": "Crypto Betting - Proof of concept, distributed Roulette game of cryptographic bets with Gun",
   "private": true,
   "author": "Esteban Fuster Pozzi <estebanrfp@gmail.com>",
   "scripts": {
