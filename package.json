@@ -28,7 +28,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-register": "^6.23.0",
     "body-parser": "^1.19.0",
-    "caniuse-db": "^1.0.30000984",
+    "caniuse-db": "1.0.30001192",
     "compression": "^1.7.4",
     "cookie-parser": "^1.4.4",
     "do-wrapper": "^3.24.0",
