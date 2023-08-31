@@ -1,0 +1,56 @@
+User-agent: *
+
+# No indexar carpetas y sus contenidos
+Disallow: /build/*
+Disallow: /src/*
+Disallow: /admin/
+Disallow: /login/
+Disallow: /signup/
+
+Sitemap: https://cryptoapuestas.com/sitemap.xml
+Disallow: /usuarios/*
+
+Disallow: /fonts/
+Disallow: /images/*
+
+# No indexar archivos terminados con estas extensiones
+Disallow: /*.js$
+Disallow: /*.inc$
+Disallow: /*.css$
+Disallow: /*.gz$
+Disallow: /*.wmv$
+Disallow: /*.cgi$
+Disallow: /*.xhtml$
+Disallow: /*?*
+Disallow: /*.txt$
+Disallow: /*.xml$
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: Adsbot-Google
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot
+
+# No indexar carpetas y sus contenidos
+Disallow: /build/*
+Disallow: /src/*
+Disallow: /views/*
+Disallow: /login/
+Disallow: /signup/
+
+Sitemap: https://desarrolloactivo.com/sitemap.xml
+Disallow: /?s=
+Disallow: /?tag=
+Disallow: /search
+
+User-agent: noxtrumbot
+User-agent: msnbot
+User-agent: Slurp
