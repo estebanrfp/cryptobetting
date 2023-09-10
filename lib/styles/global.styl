@@ -1,0 +1,164 @@
+:root
+// // #009688 #666 #ededed #336392
+  --menu-highlight-color rgb(145,168,197) // #4bb2e0
+
+.header-menu
+    position absolute
+    padding .5rem 1rem
+    width 100%
+    background rgba(0,0,0,.35)
+    color var(--menu-highlight-color)
+    z-index 1000
+
+// .app-container
+//     width 100%
+//     height 100%
+//     overflow hidden
+//     background linear-gradient(0deg,rgba(0,0,0,.2),rgba(0,0,0,.62))
+//     &,.toggle-nav-left
+//         position absolute
+//         color #808080
+//         z-index 10000
+//       .zmdi.zmdi-menu
+//           font-size 1.6rem
+//     .toggle-nav-left
+//         padding 1rem 1.4rem
+// .main-container
+//     width 100%
+//     height 100%
+//     position fixed
+//     transform translateX(0)
+//     transform translate3d(0, 0, 0)
+//     transition 0.3s ease all
+
+// .Layout
+//     transform scale(1)
+//     position absolute
+//     width 100%
+//     min-width 300px
+//     height 100%
+//     overflow hidden
+//     top 0
+//     opacity 1
+//     // transition 0.3s ease all
+//     // transition width .6s
+//     // background-color #ededed
+//     background rgba(0,0,0,.239)
+//     // background-color blue
+
+//     img[src*="#left"]
+//       max-width 50%
+//       float left
+//       padding 1rem 1rem 1rem 0
+//     img[src*="#right"]
+//         max-width 50%
+//         float right
+//         padding 1rem 0 1rem 1rem
+//     img[src*="#center"]
+//         display block
+//         padding 1rem 0
+//         margin 0 auto
+
+// .Layout
+//     grid-area main
+//     // display grid
+//     display flex
+//     flex-direction column
+//     // transform scale(1)
+//     // box-shadow 0px 22px 54px rgba(0, 0, 0, 0.5)
+//     // box-shadow 0px 1px 25px rgba(0,0,0,0.5)
+//     // position absolute
+//     width 100%
+//     min-width 200px
+//     // height 100%
+//     // height 100vh
+//     // height calc(100% - 60px)
+//     overflow scroll
+//     // overflow hidden
+//     opacity 1
+//     // transition all 0.5s ease 0s
+//     // transition 0.3s ease all
+//     // transition width .6s
+//     // background-color var(--menu-highlight-color)
+//     // background #0000003d
+
+//     position absolute
+//     // margin-top 60px
+//     // padding-top 60px
+
+//     img[src*="#left"]
+//         max-width 50%
+//         float left
+//         padding 1rem 1rem 1rem 0
+//     img[src*="#right"]
+//         max-width 50%
+//         float right
+//         padding 1rem 0 1rem 1rem
+//     img[src*="#center"]
+//         display block
+//         padding 1rem 0
+//         margin 0 auto
+//     img[src*="#auto"]
+//         display block
+//         padding 1rem 0
+//         margin 0 auto
+//         width auto
+
+//     iframe
+//         border 0
+//         width 100%
+//         height 380px
+//         padding 1rem 0
+//     iframe[src*="#left"]
+//         max-width 50%
+//         float left
+//         padding 1rem 1rem 1rem 0
+//     iframe[src*="#right"]
+//         max-width 50%
+//         float right
+//         padding 1rem 0 1rem 1rem
+//     iframe[src*="#center"]
+//         display block
+//         padding 1rem 0
+//         margin 0 auto
+
+
+.transition
+    // -webkit-transform translateX(50px)
+    // -webkit-transform translateZ(-50px) rotateX(95deg)
+    opacity .5
+
+.opacity
+    -webkit-filter brightness(.6)
+    -moz-filter brightness(.6)
+    filter brightness(.6)
+
+// .show-nav-top
+//     .main-container
+//         transform translateY(-40px)
+//         transform translate3d(0, 40px, 0)
+
+// .Sidebar-top
+//     position absolute
+//     width 100%
+//     height 40px
+//     padding .5em
+//     top -40px
+//     text-align center
+//     color #62A1C2
+//     border-bottom 1px solid #e0e0e0
+
+@keyframes fading
+    from
+        opacity 0
+    to
+        opacity 1
+
+// @media screen and (min-width: 1320px)
+//     .Layout
+//         width 1320px
+//         left calc(50% - 660px)
+
+// @media screen and (min-width: 1024px)
+//     .leftContent
+//         height 0px
