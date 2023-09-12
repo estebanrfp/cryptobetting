@@ -1,0 +1,252 @@
+body
+	// font-family helvetica
+	height 100vh
+	width 100vw
+	// background #e90052
+	margin 0
+	display flex
+	transition background 0.5s
+.scene
+	width 650px
+	height 70px
+	perspective 400px
+	margin auto
+	position relative
+	transition opacity 0.5s
+	z-index 2
+	&.end
+		opacity 0
+		transition-delay 0.25s
+		transition opacity 0.5s
+		z-index 0
+.welcome
+	opacity 0
+	width 100%
+	position absolute
+	height 100%
+	display flex
+	transition-delay 0.25s
+	transition opacity 0.5s
+	.content
+		margin auto
+		font-size 2rem
+		color #ffffff
+	&.show
+		opacity 1
+.cube
+	width 100%
+	height 100%
+	position relative
+	transform-style preserve-3d
+	transform translateZ(-100px)
+.steps
+	position absolute
+	top 140%
+	display flex
+	width 100%
+	justify-content center
+	.dot
+		width 15px
+		height 15px
+		background rgba(0, 0, 0, 0.75)
+		border-radius 100%
+		margin 0 10px
+		transition 0.25s
+		&.done
+			background rgba(255, 255, 255, 0.75)
+.cube__face
+	position absolute
+	width 100%
+	height 100%
+	font-size 40px
+	font-weight bold
+	transition transform 0.5s
+	opacity 0
+	background #ffffff
+	// border-radius 5px
+	.container
+		height 100%
+		width 100%
+		position relative
+		padding-right 185px
+		padding-left 50px
+.cube__face--front
+	transform rotateY(0deg) translateZ(35px)
+	opacity 1
+	// box-shadow 15px 15px 50px rgba(0, 0, 0, 0.5)
+.cube__face--top
+	transform rotateX(90deg) translateZ(35px)
+	opacity 1
+	.container
+		opacity 0
+		transition opacity 0.5s
+.cube__face--bottom
+	transform rotateX(-90deg) translateZ(35px)
+.hidden
+	display none
+
+input:not([type="radio"]),
+select
+	display block
+	margin 0
+	width 100%
+	border none
+	background-color transparent
+	color #202020
+	text-overflow ellipsis
+	font-weight normal
+	font-size 1.5rem
+	height 100%
+input:focus,
+select:focus
+	outline none
+input
+	&::placeholder
+		color #a0a0a0
+	&.label
+		&::placeholder
+			color gray !important
+div
+	&.btn
+		position absolute
+		right 10px
+		top 0
+		height 100%
+		display flex
+		transition opacity 0.25s ease
+		opacity 0
+		&.show
+			opacity 1 !important
+			span
+				display block !important
+		span
+			color #e90052
+			font-size 1.25rem
+			padding 10px 25px
+			border 3px solid #e90052
+			border-radius 40px
+			display inline-block
+			margin auto
+			cursor pointer
+			transition all 0.25s
+			display none
+			&:hover
+				color #ffffff !important
+				background #e90052
+		&.blue
+			span
+				color #04f5ff
+				border-color #04f5ff
+				&:hover
+					background #04f5ff
+		&.yellow
+			span
+				color #ebff00
+				border-color #ebff00
+				&:hover
+					background #ebff00
+		&.purple
+			span
+				color #e90052
+				border-color #e90052
+				&:hover
+					background #e90052
+		&.green
+			span
+				color #00ff85
+				border-color #00ff85
+				&:hover
+					background #00ff85
+		&.violet
+			span
+				color #38003c
+				border-color #38003c
+				&:hover
+					background #38003c
+#step__1 .container,
+#step__6 .container
+	display flex
+	padding-right 10px
+.radio
+	display flex
+	align-items center
+.item
+	width 46px
+	height 46px
+	margin 2px
+	cursor pointer
+	transition transform 0.25s
+	border-radius 4px
+	&:hover
+		transform scale(1.2)
+body.blue,
+.item.blue
+	background #04f5ff
+body.yellow,
+.item.yellow
+	background #ebff00
+body.purple,
+.item.purple
+	background #e90052
+body.green,
+.item.green
+	background #00ff85
+body.violet,
+.item.violet
+	background #38003c
+.right
+	display flex
+	align-items center
+	label
+		font-size 1.5rem
+		font-weight normal
+.checkbox
+	padding 4px
+	border 3px solid #e90052
+	display inline-block
+	width 64px
+	border-radius 40px
+	margin auto 8px
+	.circle
+		height 25px
+		width 25px
+		border-radius 100%
+		background #e90052
+		display block
+		transform translateX(0px)
+		transition transform 0.25s ease, background 0.25s ease
+	&.checked
+		background #e90052
+		.circle
+			transform translateX(25px)
+			background white !important
+		&.blue
+			background #04f5ff
+		&.yellow
+			background #ebff00
+		&.purple
+			background #e90052
+		&.green
+			background #00ff85
+		&.violet
+			background #38003c
+	&.blue
+		border-color #04f5ff
+		.circle
+			background #04f5ff
+	&.yellow
+		border-color #ebff00
+		.circle
+			background #ebff00
+	&.purple
+		border-color #e90052
+		.circle
+			background #e90052
+	&.green
+		border-color #00ff85
+		.circle
+			background #00ff85
+	&.violet
+		border-color #38003c
+		.circle
+			background #38003c

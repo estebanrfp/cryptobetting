@@ -1,0 +1,2097 @@
+body,
+form {
+  margin: 0;
+  padding: 0;
+}
+[type="radio"],
+[type="reset"] {
+  position: absolute;
+  top: -999px;
+  left: -999px;
+}
+label {
+  display: block;
+  cursor: pointer;
+}
+.table {
+  position: relative;
+  float: left;
+  width: calc(12 * 6.25vw);
+  left: calc(2 * 6.25vw);
+  border-right: 1px black solid;
+  border-bottom: 1px black solid;
+}
+.table .squares {
+  position: absolute;
+  float: left;
+  width: calc(6.25vw * 12);
+  pointer-events: none;
+}
+.table .squares div {
+  float: left;
+  position: relative;
+  width: calc(6.25vw - 1px);
+  height: calc(6.25vw / 2 - 1px);
+  border-left: 1px black solid;
+  border-top: 1px black solid;
+}
+.table .squares div:before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  background: red;
+  border-radius: 50%;
+}
+.table .squares div:after {
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  width: 80%;
+  height: 75%;
+  text-align: center;
+}
+#sq6:before,
+#sq15:before,
+#sq24:before,
+#sq33:before,
+#sq2:before,
+#sq8:before,
+#sq11:before,
+#sq17:before,
+#sq20:before,
+#sq26:before,
+#sq29:before,
+#sq35:before,
+#sq4:before,
+#sq10:before,
+#sq13:before,
+#sq22:before,
+#sq28:before,
+#sq31:before {
+  background: black;
+}
+.table .squares div,
+[for^="odd"],
+[for^="even"],
+[for^="z-"],
+[for^="h-"],
+[for^="l-"],
+[for="s-0-"] {
+  text-align: center;
+  font-size: 2vw;
+  font-weight: bold;
+  color: white;
+  background: green;
+}
+[for^="red"],
+[for^="black"] {
+  background: green;
+}
+[for^="red"]:before,
+[for^="black"]:before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 80%;
+  top: 10%;
+  left: 10%;
+  border-radius: 50%;
+  background: red;
+}
+[for^="black"]:before {
+  background: black;
+}
+.table label {
+  float: left;
+  position: relative;
+  width: calc(6.25vw);
+  height: calc(6.25vw / 2 - 0.5vw);
+}
+.table [for^="s-"] {
+  width: calc(6.25vw / 3);
+  height: calc(6.25vw / 3 / 2);
+}
+.table [for^="p-"] {
+  width: calc(6.25vw / 3);
+  height: calc(2 * 6.25vw / 3 / 2);
+}
+.table [for$="-p"] {
+  width: calc(2 * 6.25vw / 3);
+  height: calc(6.25vw / 3 / 2);
+}
+.table [for="b-0-1-2-3-"],
+.table [for^="o-"] {
+  width: calc(6.25vw / 3);
+  height: calc(2 * 6.25vw / 3 / 2);
+  z-index: 2;
+}
+.table [for^="t-"] {
+  width: calc(6.25vw / 3);
+  height: calc(6.25vw / 3 / 2);
+}
+.table [for^="d-"] {
+  width: calc(2 * 6.25vw / 3);
+  height: calc(6.25vw / 3 / 2);
+}
+.table [for^="q-"] {
+  width: calc(2 * 6.25vw / 3);
+  height: calc(2 * 6.25vw / 3 / 2);
+}
+.table [for="s-0-"] {
+  float: none;
+  position: absolute;
+  left: calc(-3 * 6.25vw / 3);
+  top: 0;
+  width: calc(3 * 6.25vw / 3 - 1px);
+  height: calc(3 * 6.25vw / 2 - 1px - 7.5vw / 2);
+  padding-top: 3.75vw;
+  border-left: 1px black solid;
+  border-top: 1px black solid;
+  border-bottom: 1px black solid;
+}
+.table [for="b-0-1-2-3-"],
+.table [for^="o-"],
+.table [for^="l-"] {
+  float: none;
+  position: absolute;
+}
+.table [for="b-0-1-2-3-"] {
+  top: 1px;
+  left: calc(-1 * 6.25vw / 3);
+  height: calc(1 * 6.25vw / 3 / 2);
+}
+.table [for="o-0-2-3-"] {
+  left: calc(-1 * 6.25vw / 3);
+  top: calc(2 * 6.25vw / 3 / 2);
+}
+.table [for="o-0-1-2-"] {
+  left: calc(-1 * 6.25vw / 3);
+  top: calc(5 * 6.25vw / 3 / 2);
+}
+.table [for^="l-"] {
+  right: calc(-1 * 6.25vw - 1px);
+  width: calc(1 * 6.25vw - 1px);
+  border-top: 1px black solid;
+  border-right: 1px black solid;
+  border-left: 1px black solid;
+  height: calc(1 * 6.25vw / 2);
+}
+.table [for="l-3-6-9-12-15-18-21-24-27-30-33-36-"] {
+  top: 0;
+}
+.table [for="l-2-5-8-11-14-17-20-23-26-29-32-35-"] {
+  top: calc(6.25vw / 2);
+}
+.table [for="l-1-4-7-10-13-16-19-22-25-28-31-34-"] {
+  top: calc(1 * 6.25vw);
+  height: calc(1 * 6.25vw / 2 - 1px);
+  border-bottom: 1px black solid;
+}
+.table [for^="z-"] {
+  width: calc(4 * 6.25vw - 1px);
+}
+.table [for^="h-"],
+.table [for^="red"],
+.table [for^="black"],
+.table [for^="odd"],
+.table [for^="even"] {
+  width: calc(2 * 6.25vw - 1px);
+}
+.table [for^="z-"],
+.table [for^="h-"],
+.table [for^="red"],
+.table [for^="black"],
+.table [for^="odd"],
+.table [for^="even"] {
+  border-top: 1px black solid;
+  border-left: 1px black solid;
+  padding-top: 0.5vw;
+}
+.table [for="t-1-2-3-"],
+.table [for="s-3-"],
+.table [for="p-2-3-"],
+.table [for="s-2-"],
+.table [for="p-1-2-"],
+.table [for="s-1-"],
+.table [for="t-34-35-36-"],
+.table [for="s-36-"],
+.table [for="p-35-36-"],
+.table [for="s-35-"],
+.table [for="p-34-35-"],
+.table [for="s-34-"] {
+  width: calc(2 * 6.25vw / 3);
+}
+.table [for="s-1-"],
+.table [for="p-1-4-p"],
+.table [for="s-4-"],
+.table [for="p-4-7-p"],
+.table [for="s-7-"],
+.table [for="p-7-10-p"],
+.table [for="s-10-"],
+.table [for="p-10-13-p"],
+.table [for="s-13-"],
+.table [for="p-13-16-p"],
+.table [for="s-16-"],
+.table [for="p-16-19-p"],
+.table [for="s-19-"],
+.table [for="p-19-22-p"],
+.table [for="s-22-"],
+.table [for="p-22-25-p"],
+.table [for="s-25-"],
+.table [for="p-25-28-p"],
+.table [for="s-28-"],
+.table [for="p-28-31-p"],
+.table [for="s-31-"],
+.table [for="p-31-34-p"],
+.table [for="s-34-"] {
+  height: calc(2 * 6.25vw / 3 / 2);
+}
+[id*="-0-"]:checked ~ .table [for="s-0-"],
+[id*="-1-"]:checked ~ .table .squares #sq1,
+[id*="-2-"]:checked ~ .table .squares #sq2,
+[id*="-3-"]:checked ~ .table .squares #sq3,
+[id*="-4-"]:checked ~ .table .squares #sq4,
+[id*="-5-"]:checked ~ .table .squares #sq5,
+[id*="-6-"]:checked ~ .table .squares #sq6,
+[id*="-7-"]:checked ~ .table .squares #sq7,
+[id*="-8-"]:checked ~ .table .squares #sq8,
+[id*="-9-"]:checked ~ .table .squares #sq9,
+[id*="-10-"]:checked ~ .table .squares #sq10,
+[id*="-11-"]:checked ~ .table .squares #sq11,
+[id*="-12-"]:checked ~ .table .squares #sq12,
+[id*="-13-"]:checked ~ .table .squares #sq13,
+[id*="-14-"]:checked ~ .table .squares #sq14,
+[id*="-15-"]:checked ~ .table .squares #sq15,
+[id*="-16-"]:checked ~ .table .squares #sq16,
+[id*="-17-"]:checked ~ .table .squares #sq17,
+[id*="-18-"]:checked ~ .table .squares #sq18,
+[id*="-19-"]:checked ~ .table .squares #sq19,
+[id*="-20-"]:checked ~ .table .squares #sq20,
+[id*="-21-"]:checked ~ .table .squares #sq21,
+[id*="-22-"]:checked ~ .table .squares #sq22,
+[id*="-23-"]:checked ~ .table .squares #sq23,
+[id*="-24-"]:checked ~ .table .squares #sq24,
+[id*="-25-"]:checked ~ .table .squares #sq25,
+[id*="-26-"]:checked ~ .table .squares #sq26,
+[id*="-27-"]:checked ~ .table .squares #sq27,
+[id*="-28-"]:checked ~ .table .squares #sq28,
+[id*="-29-"]:checked ~ .table .squares #sq29,
+[id*="-30-"]:checked ~ .table .squares #sq30,
+[id*="-31-"]:checked ~ .table .squares #sq31,
+[id*="-32-"]:checked ~ .table .squares #sq32,
+[id*="-33-"]:checked ~ .table .squares #sq33,
+[id*="-34-"]:checked ~ .table .squares #sq34,
+[id*="-35-"]:checked ~ .table .squares #sq35,
+[id*="-36-"]:checked ~ .table .squares #sq36,
+[id="l-3-6-9-12-15-18-21-24-27-30-33-36-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(-n + 12),
+[id="l-2-5-8-11-14-17-20-23-26-29-32-35-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 13):nth-of-type(-n + 24),
+[id="l-1-4-7-10-13-16-19-22-25-28-31-34-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 25):nth-of-type(-n + 36),
+[id="z-1-2-3-4-5-6-7-8-9-10-11-12-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(-n + 4),
+[id="z-1-2-3-4-5-6-7-8-9-10-11-12-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 13):nth-of-type(-n + 16),
+[id="z-1-2-3-4-5-6-7-8-9-10-11-12-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 25):nth-of-type(-n + 28),
+[id="z-13-14-15-16-17-18-19-20-21-22-23-24-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 5):nth-of-type(-n + 8),
+[id="z-13-14-15-16-17-18-19-20-21-22-23-24-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 17):nth-of-type(-n + 20),
+[id="z-13-14-15-16-17-18-19-20-21-22-23-24-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 29):nth-of-type(-n + 32),
+[id="z-25-26-27-28-29-30-31-32-33-34-35-36-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 9):nth-of-type(-n + 12),
+[id="z-25-26-27-28-29-30-31-32-33-34-35-36-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 21):nth-of-type(-n + 24),
+[id="z-25-26-27-28-29-30-31-32-33-34-35-36-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 33):nth-of-type(-n + 36),
+[id="h-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(-n + 6),
+[id="h-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 13):nth-of-type(-n + 18),
+[id="h-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 25):nth-of-type(-n + 30),
+[id="h-19-20-21-22-23-24-25-26-27-28-29-30-31-32-33-34-35-36-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 7):nth-of-type(-n + 12),
+[id="h-19-20-21-22-23-24-25-26-27-28-29-30-31-32-33-34-35-36-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 19):nth-of-type(-n + 24),
+[id="h-19-20-21-22-23-24-25-26-27-28-29-30-31-32-33-34-35-36-"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(n + 31):nth-of-type(-n + 36),
+[id^="red"]:checked ~ .table .squares #sq3,
+[id^="red"]:checked ~ .table .squares #sq9,
+[id^="red"]:checked ~ .table .squares #sq12,
+[id^="red"]:checked ~ .table .squares #sq18,
+[id^="red"]:checked ~ .table .squares #sq21,
+[id^="red"]:checked ~ .table .squares #sq27,
+[id^="red"]:checked ~ .table .squares #sq30,
+[id^="red"]:checked ~ .table .squares #sq36,
+[id^="red"]:checked ~ .table .squares #sq5,
+[id^="red"]:checked ~ .table .squares #sq14,
+[id^="red"]:checked ~ .table .squares #sq23,
+[id^="red"]:checked ~ .table .squares #sq32,
+[id^="red"]:checked ~ .table .squares #sq1,
+[id^="red"]:checked ~ .table .squares #sq7,
+[id^="red"]:checked ~ .table .squares #sq16,
+[id^="red"]:checked ~ .table .squares #sq19,
+[id^="red"]:checked ~ .table .squares #sq25,
+[id^="red"]:checked ~ .table .squares #sq34,
+[id^="black"]:checked ~ .table .squares #sq6,
+[id^="black"]:checked ~ .table .squares #sq15,
+[id^="black"]:checked ~ .table .squares #sq24,
+[id^="black"]:checked ~ .table .squares #sq33,
+[id^="black"]:checked ~ .table .squares #sq2,
+[id^="black"]:checked ~ .table .squares #sq8,
+[id^="black"]:checked ~ .table .squares #sq11,
+[id^="black"]:checked ~ .table .squares #sq17,
+[id^="black"]:checked ~ .table .squares #sq20,
+[id^="black"]:checked ~ .table .squares #sq26,
+[id^="black"]:checked ~ .table .squares #sq29,
+[id^="black"]:checked ~ .table .squares #sq35,
+[id^="black"]:checked ~ .table .squares #sq4,
+[id^="black"]:checked ~ .table .squares #sq10,
+[id^="black"]:checked ~ .table .squares #sq13,
+[id^="black"]:checked ~ .table .squares #sq22,
+[id^="black"]:checked ~ .table .squares #sq28,
+[id^="black"]:checked ~ .table .squares #sq31,
+[id^="odd"]:checked ~ .table .squares div:nth-of-type(-2n + 11),
+[id^="odd"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(2n + 14):nth-of-type(-2n + 24),
+[id^="odd"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(2n + 25):nth-of-type(-2n + 35),
+[id^="even"]:checked ~ .table .squares div:nth-of-type(-2n + 12),
+[id^="even"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(2n + 13):nth-of-type(-2n + 23),
+[id^="even"]:checked
+  ~ .table
+  .squares
+  div:nth-of-type(2n + 26):nth-of-type(-2n + 36) {
+  background: cyan;
+}
+.table label:hover,
+.table [for="b-0-1-2-3-"]:hover ~ [for="s-0-"],
+.table [for^="o-"]:hover ~ [for="s-0-"],
+.table [for*="-1-"]:hover ~ .squares #sq1,
+.table [for*="-2-"]:hover ~ .squares #sq2,
+.table [for*="-3-"]:hover ~ .squares #sq3,
+.table [for*="-4-"]:hover ~ .squares #sq4,
+.table [for*="-5-"]:hover ~ .squares #sq5,
+.table [for*="-6-"]:hover ~ .squares #sq6,
+.table [for*="-7-"]:hover ~ .squares #sq7,
+.table [for*="-8-"]:hover ~ .squares #sq8,
+.table [for*="-9-"]:hover ~ .squares #sq9,
+.table [for*="-10-"]:hover ~ .squares #sq10,
+.table [for*="-11-"]:hover ~ .squares #sq11,
+.table [for*="-12-"]:hover ~ .squares #sq12,
+.table [for*="-13-"]:hover ~ .squares #sq13,
+.table [for*="-14-"]:hover ~ .squares #sq14,
+.table [for*="-15-"]:hover ~ .squares #sq15,
+.table [for*="-16-"]:hover ~ .squares #sq16,
+.table [for*="-17-"]:hover ~ .squares #sq17,
+.table [for*="-18-"]:hover ~ .squares #sq18,
+.table [for*="-19-"]:hover ~ .squares #sq19,
+.table [for*="-20-"]:hover ~ .squares #sq20,
+.table [for*="-21-"]:hover ~ .squares #sq21,
+.table [for*="-22-"]:hover ~ .squares #sq22,
+.table [for*="-23-"]:hover ~ .squares #sq23,
+.table [for*="-24-"]:hover ~ .squares #sq24,
+.table [for*="-25-"]:hover ~ .squares #sq25,
+.table [for*="-26-"]:hover ~ .squares #sq26,
+.table [for*="-27-"]:hover ~ .squares #sq27,
+.table [for*="-28-"]:hover ~ .squares #sq28,
+.table [for*="-29-"]:hover ~ .squares #sq29,
+.table [for*="-30-"]:hover ~ .squares #sq30,
+.table [for*="-31-"]:hover ~ .squares #sq31,
+.table [for*="-32-"]:hover ~ .squares #sq32,
+.table [for*="-33-"]:hover ~ .squares #sq33,
+.table [for*="-34-"]:hover ~ .squares #sq34,
+.table [for*="-35-"]:hover ~ .squares #sq35,
+.table [for*="-36-"]:hover ~ .squares #sq36,
+.table
+  [for="l-3-6-9-12-15-18-21-24-27-30-33-36-"]:hover
+  ~ .squares
+  div:nth-of-type(-n + 12),
+.table
+  [for="l-2-5-8-11-14-17-20-23-26-29-32-35-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 13):nth-of-type(-n + 24),
+.table
+  [for="l-1-4-7-10-13-16-19-22-25-28-31-34-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 25):nth-of-type(-n + 36),
+.table
+  [for="z-1-2-3-4-5-6-7-8-9-10-11-12-"]:hover
+  ~ .squares
+  div:nth-of-type(-n + 4),
+.table
+  [for="z-1-2-3-4-5-6-7-8-9-10-11-12-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 13):nth-of-type(-n + 16),
+.table
+  [for="z-1-2-3-4-5-6-7-8-9-10-11-12-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 25):nth-of-type(-n + 28),
+.table
+  [for="z-13-14-15-16-17-18-19-20-21-22-23-24-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 5):nth-of-type(-n + 8),
+.table
+  [for="z-13-14-15-16-17-18-19-20-21-22-23-24-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 17):nth-of-type(-n + 20),
+.table
+  [for="z-13-14-15-16-17-18-19-20-21-22-23-24-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 29):nth-of-type(-n + 32),
+.table
+  [for="z-25-26-27-28-29-30-31-32-33-34-35-36-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 9):nth-of-type(-n + 12),
+.table
+  [for="z-25-26-27-28-29-30-31-32-33-34-35-36-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 21):nth-of-type(-n + 24),
+.table
+  [for="z-25-26-27-28-29-30-31-32-33-34-35-36-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 33):nth-of-type(-n + 36),
+.table
+  [for="h-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-"]:hover
+  ~ .squares
+  div:nth-of-type(-n + 6),
+.table
+  [for="h-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 13):nth-of-type(-n + 18),
+.table
+  [for="h-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 25):nth-of-type(-n + 30),
+.table
+  [for="h-19-20-21-22-23-24-25-26-27-28-29-30-31-32-33-34-35-36-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 7):nth-of-type(-n + 12),
+.table
+  [for="h-19-20-21-22-23-24-25-26-27-28-29-30-31-32-33-34-35-36-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 19):nth-of-type(-n + 24),
+.table
+  [for="h-19-20-21-22-23-24-25-26-27-28-29-30-31-32-33-34-35-36-"]:hover
+  ~ .squares
+  div:nth-of-type(n + 31):nth-of-type(-n + 36),
+.table [for^="red"]:hover ~ .squares #sq3,
+.table [for^="red"]:hover ~ .squares #sq9,
+.table [for^="red"]:hover ~ .squares #sq12,
+.table [for^="red"]:hover ~ .squares #sq18,
+.table [for^="red"]:hover ~ .squares #sq21,
+.table [for^="red"]:hover ~ .squares #sq27,
+.table [for^="red"]:hover ~ .squares #sq30,
+.table [for^="red"]:hover ~ .squares #sq36,
+.table [for^="red"]:hover ~ .squares #sq5,
+.table [for^="red"]:hover ~ .squares #sq14,
+.table [for^="red"]:hover ~ .squares #sq23,
+.table [for^="red"]:hover ~ .squares #sq32,
+.table [for^="red"]:hover ~ .squares #sq1,
+.table [for^="red"]:hover ~ .squares #sq7,
+.table [for^="red"]:hover ~ .squares #sq16,
+.table [for^="red"]:hover ~ .squares #sq19,
+.table [for^="red"]:hover ~ .squares #sq25,
+.table [for^="red"]:hover ~ .squares #sq34,
+.table [for^="black"]:hover ~ .squares #sq6,
+.table [for^="black"]:hover ~ .squares #sq15,
+.table [for^="black"]:hover ~ .squares #sq24,
+.table [for^="black"]:hover ~ .squares #sq33,
+.table [for^="black"]:hover ~ .squares #sq2,
+.table [for^="black"]:hover ~ .squares #sq8,
+.table [for^="black"]:hover ~ .squares #sq11,
+.table [for^="black"]:hover ~ .squares #sq17,
+.table [for^="black"]:hover ~ .squares #sq20,
+.table [for^="black"]:hover ~ .squares #sq26,
+.table [for^="black"]:hover ~ .squares #sq29,
+.table [for^="black"]:hover ~ .squares #sq35,
+.table [for^="black"]:hover ~ .squares #sq4,
+.table [for^="black"]:hover ~ .squares #sq10,
+.table [for^="black"]:hover ~ .squares #sq13,
+.table [for^="black"]:hover ~ .squares #sq22,
+.table [for^="black"]:hover ~ .squares #sq28,
+.table [for^="black"]:hover ~ .squares #sq31,
+.table [for^="odd"]:hover ~ .squares div:nth-of-type(-2n + 11),
+.table
+  [for^="odd"]:hover
+  ~ .squares
+  div:nth-of-type(2n + 14):nth-of-type(-2n + 24),
+.table
+  [for^="odd"]:hover
+  ~ .squares
+  div:nth-of-type(2n + 25):nth-of-type(-2n + 35),
+.table [for^="even"]:hover ~ .squares div:nth-of-type(-2n + 12),
+.table
+  [for^="even"]:hover
+  ~ .squares
+  div:nth-of-type(2n + 13):nth-of-type(-2n + 23),
+.table
+  [for^="even"]:hover
+  ~ .squares
+  div:nth-of-type(2n + 26):nth-of-type(-2n + 36) {
+  background: yellowgreen;
+}
+.wheel {
+  position: relative;
+  width: 20vw;
+  height: 20vw;
+  left: 6.25vw;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.wheel span {
+  display: block;
+  position: absolute;
+  border-radius: 50%;
+}
+.wheel span.centre {
+  top: 12.5%;
+  left: 12.5%;
+  width: 75%;
+  height: 75%;
+  background: #ccc;
+}
+.wheel span.ball {
+  top: 47.5%;
+  left: 47.5%;
+  width: 5%;
+  height: 5%;
+  background: white;
+  transform: rotate(0) translateY(-800%);
+}
+.wheel div {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 50%;
+  transform-origin: 0 100%;
+}
+.wheel div:before {
+  content: "";
+  position: absolute;
+  top: -100%;
+  left: 0;
+  width: 200%;
+  height: 200%;
+  background: black;
+  transform-origin: 0 100%;
+  transform: rotate(calc(-8.75 * 360deg / 37)) skew(calc(360deg / 37 - 90deg));
+}
+.wheel div:nth-of-type(2n):before {
+  background: red;
+}
+.wheel div:after {
+  position: absolute;
+  top: 0;
+  left: -0.5vw;
+  width: 1vw;
+  height: 2vw;
+  z-index: 2;
+  color: white;
+  font-size: 1vw;
+  font-weight: bold;
+  text-align: center;
+  font-family: sans-serif;
+}
+.wheel div:nth-of-type(1):after {
+  content: "0";
+}
+[id^="c32_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(2):after,
+#sq32:after {
+  content: "32";
+}
+.wheel div:nth-of-type(2) {
+  transform: rotate(calc(1 * 360deg / 37));
+}
+[id^="c15_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(3):after,
+#sq15:after {
+  content: "15";
+}
+.wheel div:nth-of-type(3) {
+  transform: rotate(calc(2 * 360deg / 37));
+}
+[id^="c19_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(4):after,
+#sq19:after {
+  content: "19";
+}
+.wheel div:nth-of-type(4) {
+  transform: rotate(calc(3 * 360deg / 37));
+}
+[id^="c4_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(5):after,
+#sq4:after {
+  content: "4";
+}
+.wheel div:nth-of-type(5) {
+  transform: rotate(calc(4 * 360deg / 37));
+}
+[id^="c21_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(6):after,
+#sq21:after {
+  content: "21";
+}
+.wheel div:nth-of-type(6) {
+  transform: rotate(calc(5 * 360deg / 37));
+}
+[id^="c2_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(7):after,
+#sq2:after {
+  content: "2";
+}
+.wheel div:nth-of-type(7) {
+  transform: rotate(calc(6 * 360deg / 37));
+}
+[id^="c25_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(8):after,
+#sq25:after {
+  content: "25";
+}
+.wheel div:nth-of-type(8) {
+  transform: rotate(calc(7 * 360deg / 37));
+}
+[id^="c17_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(9):after,
+#sq17:after {
+  content: "17";
+}
+.wheel div:nth-of-type(9) {
+  transform: rotate(calc(8 * 360deg / 37));
+}
+[id^="c34_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(10):after,
+#sq34:after {
+  content: "34";
+}
+.wheel div:nth-of-type(10) {
+  transform: rotate(calc(9 * 360deg / 37));
+}
+[id^="c6_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(11):after,
+#sq6:after {
+  content: "6";
+}
+.wheel div:nth-of-type(11) {
+  transform: rotate(calc(10 * 360deg / 37));
+}
+[id^="c27_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(12):after,
+#sq27:after {
+  content: "27";
+}
+.wheel div:nth-of-type(12) {
+  transform: rotate(calc(11 * 360deg / 37));
+}
+[id^="c13_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(13):after,
+#sq13:after {
+  content: "13";
+}
+.wheel div:nth-of-type(13) {
+  transform: rotate(calc(12 * 360deg / 37));
+}
+[id^="c36_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(14):after,
+#sq36:after {
+  content: "36";
+}
+.wheel div:nth-of-type(14) {
+  transform: rotate(calc(13 * 360deg / 37));
+}
+[id^="c11_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(15):after,
+#sq11:after {
+  content: "11";
+}
+.wheel div:nth-of-type(15) {
+  transform: rotate(calc(14 * 360deg / 37));
+}
+[id^="c30_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(16):after,
+#sq30:after {
+  content: "30";
+}
+.wheel div:nth-of-type(16) {
+  transform: rotate(calc(15 * 360deg / 37));
+}
+[id^="c8_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(17):after,
+#sq8:after {
+  content: "8";
+}
+.wheel div:nth-of-type(17) {
+  transform: rotate(calc(16 * 360deg / 37));
+}
+[id^="c23_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(18):after,
+#sq23:after {
+  content: "23";
+}
+.wheel div:nth-of-type(18) {
+  transform: rotate(calc(17 * 360deg / 37));
+}
+[id^="c10_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(19):after,
+#sq10:after {
+  content: "10";
+}
+.wheel div:nth-of-type(19) {
+  transform: rotate(calc(18 * 360deg / 37));
+}
+[id^="c5_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(20):after,
+#sq5:after {
+  content: "5";
+}
+.wheel div:nth-of-type(20) {
+  transform: rotate(calc(19 * 360deg / 37));
+}
+[id^="c24_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(21):after,
+#sq24:after {
+  content: "24";
+}
+.wheel div:nth-of-type(21) {
+  transform: rotate(calc(20 * 360deg / 37));
+}
+[id^="c16_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(22):after,
+#sq16:after {
+  content: "16";
+}
+.wheel div:nth-of-type(22) {
+  transform: rotate(calc(21 * 360deg / 37));
+}
+[id^="c33_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(23):after,
+#sq33:after {
+  content: "33";
+}
+.wheel div:nth-of-type(23) {
+  transform: rotate(calc(22 * 360deg / 37));
+}
+[id^="c1_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(24):after,
+#sq1:after {
+  content: "1";
+}
+.wheel div:nth-of-type(24) {
+  transform: rotate(calc(23 * 360deg / 37));
+}
+[id^="c20_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(25):after,
+#sq20:after {
+  content: "20";
+}
+.wheel div:nth-of-type(25) {
+  transform: rotate(calc(24 * 360deg / 37));
+}
+[id^="c14_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(26):after,
+#sq14:after {
+  content: "14";
+}
+.wheel div:nth-of-type(26) {
+  transform: rotate(calc(25 * 360deg / 37));
+}
+[id^="c31_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(27):after,
+#sq31:after {
+  content: "31";
+}
+.wheel div:nth-of-type(27) {
+  transform: rotate(calc(26 * 360deg / 37));
+}
+[id^="c9_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(28):after,
+#sq9:after {
+  content: "9";
+}
+.wheel div:nth-of-type(28) {
+  transform: rotate(calc(27 * 360deg / 37));
+}
+[id^="c22_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(29):after,
+#sq22:after {
+  content: "22";
+}
+.wheel div:nth-of-type(29) {
+  transform: rotate(calc(28 * 360deg / 37));
+}
+[id^="c18_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(30):after,
+#sq18:after {
+  content: "18";
+}
+.wheel div:nth-of-type(30) {
+  transform: rotate(calc(29 * 360deg / 37));
+}
+[id^="c29_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(31):after,
+#sq29:after {
+  content: "29";
+}
+.wheel div:nth-of-type(31) {
+  transform: rotate(calc(30 * 360deg / 37));
+}
+[id^="c7_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(32):after,
+#sq7:after {
+  content: "7";
+}
+.wheel div:nth-of-type(32) {
+  transform: rotate(calc(31 * 360deg / 37));
+}
+[id^="c28_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(33):after,
+#sq28:after {
+  content: "28";
+}
+.wheel div:nth-of-type(33) {
+  transform: rotate(calc(32 * 360deg / 37));
+}
+[id^="c12_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(34):after,
+#sq12:after {
+  content: "12";
+}
+.wheel div:nth-of-type(34) {
+  transform: rotate(calc(33 * 360deg / 37));
+}
+[id^="c35_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(35):after,
+#sq35:after {
+  content: "35";
+}
+.wheel div:nth-of-type(35) {
+  transform: rotate(calc(34 * 360deg / 37));
+}
+[id^="c3_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(36):after,
+#sq3:after {
+  content: "3";
+}
+.wheel div:nth-of-type(36) {
+  transform: rotate(calc(35 * 360deg / 37));
+}
+[id^="c26_"]:checked ~ form .cash:after,
+.wheel div:nth-of-type(37):after,
+#sq26:after {
+  content: "26";
+}
+.wheel div:nth-of-type(37) {
+  transform: rotate(calc(36 * 360deg / 37));
+}
+[id^="c37_"]:checked ~ form .cash:after {
+  content: "37";
+}
+[id^="c38_"]:checked ~ form .cash:after {
+  content: "38";
+}
+[id^="c39_"]:checked ~ form .cash:after {
+  content: "39";
+}
+[id^="c40_"]:checked ~ form .cash:after {
+  content: "40";
+}
+[id^="c41_"]:checked ~ form .cash:after {
+  content: "41";
+}
+[id^="c42_"]:checked ~ form .cash:after {
+  content: "42";
+}
+[id^="c43_"]:checked ~ form .cash:after {
+  content: "43";
+}
+[id^="c44_"]:checked ~ form .cash:after {
+  content: "44";
+}
+[id^="c45_"]:checked ~ form .cash:after {
+  content: "45";
+}
+[id^="c46_"]:checked ~ form .cash:after {
+  content: "46";
+}
+[id^="c47_"]:checked ~ form .cash:after {
+  content: "47";
+}
+[id^="c48_"]:checked ~ form .cash:after {
+  content: "48";
+}
+[id^="c49_"]:checked ~ form .cash:after {
+  content: "49";
+}
+[id^="c50_"]:checked ~ form .cash:after {
+  content: "50";
+}
+[id^="c51_"]:checked ~ form .cash:after {
+  content: "51";
+}
+[id^="c52_"]:checked ~ form .cash:after {
+  content: "52";
+}
+[id^="c53_"]:checked ~ form .cash:after {
+  content: "53";
+}
+[id^="c54_"]:checked ~ form .cash:after {
+  content: "54";
+}
+[id^="c55_"]:checked ~ form .cash:after {
+  content: "55";
+}
+[id^="c56_"]:checked ~ form .cash:after {
+  content: "56";
+}
+[id^="c57_"]:checked ~ form .cash:after {
+  content: "57";
+}
+[id^="c58_"]:checked ~ form .cash:after {
+  content: "58";
+}
+[id^="c59_"]:checked ~ form .cash:after {
+  content: "59";
+}
+[id^="c60_"]:checked ~ form .cash:after {
+  content: "60";
+}
+[id^="c61_"]:checked ~ form .cash:after {
+  content: "61";
+}
+[id^="c62_"]:checked ~ form .cash:after {
+  content: "62";
+}
+[id^="c63_"]:checked ~ form .cash:after {
+  content: "63";
+}
+[id^="c64_"]:checked ~ form .cash:after {
+  content: "64";
+}
+[id^="c65_"]:checked ~ form .cash:after {
+  content: "65";
+}
+[id^="c66_"]:checked ~ form .cash:after {
+  content: "66";
+}
+[id^="c67_"]:checked ~ form .cash:after {
+  content: "67";
+}
+[id^="c68_"]:checked ~ form .cash:after {
+  content: "68";
+}
+[id^="c69_"]:checked ~ form .cash:after {
+  content: "69";
+}
+[id^="c70_"]:checked ~ form .cash:after {
+  content: "70";
+}
+[id^="c71_"]:checked ~ form .cash:after {
+  content: "71";
+}
+[id^="c72_"]:checked ~ form .cash:after {
+  content: "72";
+}
+[id^="c73_"]:checked ~ form .cash:after {
+  content: "73";
+}
+[id^="c74_"]:checked ~ form .cash:after {
+  content: "74";
+}
+[id^="c75_"]:checked ~ form .cash:after {
+  content: "75";
+}
+[id^="c76_"]:checked ~ form .cash:after {
+  content: "76";
+}
+[id^="c77_"]:checked ~ form .cash:after {
+  content: "77";
+}
+[id^="c78_"]:checked ~ form .cash:after {
+  content: "78";
+}
+[id^="c79_"]:checked ~ form .cash:after {
+  content: "79";
+}
+[id^="c80_"]:checked ~ form .cash:after {
+  content: "80";
+}
+[id^="c81_"]:checked ~ form .cash:after {
+  content: "81";
+}
+[id^="c82_"]:checked ~ form .cash:after {
+  content: "82";
+}
+[id^="c83_"]:checked ~ form .cash:after {
+  content: "83";
+}
+[id^="c84_"]:checked ~ form .cash:after {
+  content: "84";
+}
+[id^="c85_"]:checked ~ form .cash:after {
+  content: "85";
+}
+[id^="c86_"]:checked ~ form .cash:after {
+  content: "86";
+}
+[id^="c87_"]:checked ~ form .cash:after {
+  content: "87";
+}
+[id^="c88_"]:checked ~ form .cash:after {
+  content: "88";
+}
+[id^="c89_"]:checked ~ form .cash:after {
+  content: "89";
+}
+[id^="c90_"]:checked ~ form .cash:after {
+  content: "90";
+}
+[id^="c91_"]:checked ~ form .cash:after {
+  content: "91";
+}
+[id^="c92_"]:checked ~ form .cash:after {
+  content: "92";
+}
+[id^="c93_"]:checked ~ form .cash:after {
+  content: "93";
+}
+[id^="c94_"]:checked ~ form .cash:after {
+  content: "94";
+}
+[id^="c95_"]:checked ~ form .cash:after {
+  content: "95";
+}
+[id^="c96_"]:checked ~ form .cash:after {
+  content: "96";
+}
+[id^="c97_"]:checked ~ form .cash:after {
+  content: "97";
+}
+[id^="c98_"]:checked ~ form .cash:after {
+  content: "98";
+}
+[id^="c99_"]:checked ~ form .cash:after {
+  content: "99";
+}
+[id^="c100_"]:checked ~ form .cash:after {
+  content: "100";
+}
+[id^="c0_"]:checked ~ form .cash:after {
+  content: "0";
+}
+.wheel div:first-of-type:before {
+  background: green;
+}
+.instructions {
+  position: absolute;
+  top: 15vw;
+  left: 30vw;
+  font-family: sans-serif;
+  font-size: 2vw;
+}
+.instructions:before {
+  content: "Place a bet on the table below";
+}
+[name="bets"]:checked ~ .instructions:before {
+  content: "Spin the wheel, or choose a different bet";
+}
+[name="numbers"]:checked ~ .instructions:before {
+  content: "";
+}
+[id$="_1"]:checked ~ form [id$="_2"]:checked ~ .instructions:before,
+[id$="_2"]:checked ~ form [id$="_1"]:checked ~ .instructions:before {
+  content: "Keep playing or walk away";
+}
+.spin,
+.payout,
+[for="reset"],
+.ending label {
+  visibility: hidden;
+  position: absolute;
+  overflow: hidden;
+  width: 10vw;
+  height: 3vw;
+  background: slateblue;
+  border-radius: 0.5vw;
+  color: white;
+  font-family: sans-serif;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2vw;
+  line-height: 3vw;
+}
+.spin:hover,
+.payout:hover,
+[for="reset"]:hover,
+.ending label:hover {
+  background: mediumslateblue;
+}
+.spin {
+  top: 5vw;
+  left: 30vw;
+}
+@keyframes spins {
+  100% {
+    transform: translateY(-100%);
+  }
+}
+.spin > div {
+  visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3700%;
+  animation: spins 1s steps(37) infinite;
+}
+.spin label {
+  width: 10vw;
+  height: 3vw;
+}
+.payout {
+  top: 10vw;
+  left: 30vw;
+}
+.payout:before {
+  content: "You Lost";
+}
+.payout > div {
+  visibility: hidden;
+  float: left;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 900%;
+  height: 10000%;
+}
+.payout label {
+  float: left;
+  width: 10vw;
+  height: 3vw;
+}
+.cash {
+  position: absolute;
+  top: 5vw;
+  left: 45vw;
+  width: 4vw;
+  height: 2vw;
+  padding: 0.5vw;
+  background: black;
+  border: 2px #333 solid;
+  color: yellow;
+  font-size: 2vw;
+  line-height: 2vw;
+  font-weight: bold;
+  text-align: right;
+}
+[id$="_1"]:checked ~ form [name="bets"]:checked ~ .spin,
+[id$="_1"]:checked ~ form [name="bets"]:checked ~ .spin .spins1,
+[id$="_2"]:checked ~ form [name="bets"]:checked ~ .spin,
+[id$="_2"]:checked ~ form [name="bets"]:checked ~ .spin .spins2 {
+  visibility: visible;
+}
+[name="bets"]:checked ~ .spin > div {
+  animation-play-state: paused;
+}
+[name="numbers"]:checked ~ .wheel .ball {
+  transition: transform 5s ease-out;
+}
+[name="numbers"]:checked ~ .table {
+  pointer-events: none;
+}
+[id^="n0_"]:checked ~ .wheel .ball {
+  transform: rotate(5turn) translateY(-800%);
+}
+[id^="n32_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 1 * 360deg / 37)) translateY(-800%);
+}
+[id^="n15_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 2 * 360deg / 37)) translateY(-800%);
+}
+[id^="n19_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 3 * 360deg / 37)) translateY(-800%);
+}
+[id^="n4_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 4 * 360deg / 37)) translateY(-800%);
+}
+[id^="n21_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 5 * 360deg / 37)) translateY(-800%);
+}
+[id^="n2_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 6 * 360deg / 37)) translateY(-800%);
+}
+[id^="n25_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 7 * 360deg / 37)) translateY(-800%);
+}
+[id^="n17_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 8 * 360deg / 37)) translateY(-800%);
+}
+[id^="n34_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 9 * 360deg / 37)) translateY(-800%);
+}
+[id^="n6_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 10 * 360deg / 37)) translateY(-800%);
+}
+[id^="n27_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 11 * 360deg / 37)) translateY(-800%);
+}
+[id^="n13_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 12 * 360deg / 37)) translateY(-800%);
+}
+[id^="n36_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 13 * 360deg / 37)) translateY(-800%);
+}
+[id^="n11_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 14 * 360deg / 37)) translateY(-800%);
+}
+[id^="n30_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 15 * 360deg / 37)) translateY(-800%);
+}
+[id^="n8_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 16 * 360deg / 37)) translateY(-800%);
+}
+[id^="n23_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 17 * 360deg / 37)) translateY(-800%);
+}
+[id^="n10_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 18 * 360deg / 37)) translateY(-800%);
+}
+[id^="n5_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 19 * 360deg / 37)) translateY(-800%);
+}
+[id^="n24_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 20 * 360deg / 37)) translateY(-800%);
+}
+[id^="n16_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 21 * 360deg / 37)) translateY(-800%);
+}
+[id^="n33_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 22 * 360deg / 37)) translateY(-800%);
+}
+[id^="n1_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 23 * 360deg / 37)) translateY(-800%);
+}
+[id^="n20_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 24 * 360deg / 37)) translateY(-800%);
+}
+[id^="n14_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 25 * 360deg / 37)) translateY(-800%);
+}
+[id^="n31_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 26 * 360deg / 37)) translateY(-800%);
+}
+[id^="n9_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 27 * 360deg / 37)) translateY(-800%);
+}
+[id^="n22_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 28 * 360deg / 37)) translateY(-800%);
+}
+[id^="n18_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 29 * 360deg / 37)) translateY(-800%);
+}
+[id^="n29_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 30 * 360deg / 37)) translateY(-800%);
+}
+[id^="n7_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 31 * 360deg / 37)) translateY(-800%);
+}
+[id^="n28_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 32 * 360deg / 37)) translateY(-800%);
+}
+[id^="n12_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 33 * 360deg / 37)) translateY(-800%);
+}
+[id^="n35_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 34 * 360deg / 37)) translateY(-800%);
+}
+[id^="n3_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 35 * 360deg / 37)) translateY(-800%);
+}
+[id^="n26_"]:checked ~ .wheel .ball {
+  transform: rotate(calc(5turn + 36 * 360deg / 37)) translateY(-800%);
+}
+[name="cash"]:checked
+  ~ form
+  [name="bets"]:checked
+  ~ [name="numbers"]:checked
+  ~ .spin,
+[name="cash"]:checked
+  ~ form
+  [name="bets"]:checked
+  ~ [name="numbers"]:checked
+  ~ .spin
+  > div {
+  visibility: hidden;
+}
+@keyframes slowshow {
+  99% {
+    visibility: hidden;
+  }
+  100% {
+    visibility: visible;
+  }
+}
+[id$="_1"]:checked ~ form [id$="_1"]:checked ~ .payout,
+[id$="_2"]:checked ~ form [id$="_2"]:checked ~ .payout,
+[id$="_1"]:checked ~ form [id$="_1"]:checked ~ .payout .payouts2,
+[id$="_2"]:checked ~ form [id$="_2"]:checked ~ .payout .payouts1 {
+  animation: slowshow 5s linear 1 forwards;
+}
+[id^="c2_"]:checked ~ form .payout > div {
+  top: -3vw;
+}
+[id^="c3_"]:checked ~ form .payout > div {
+  top: -6vw;
+}
+[id^="c4_"]:checked ~ form .payout > div {
+  top: -9vw;
+}
+[id^="c5_"]:checked ~ form .payout > div {
+  top: -12vw;
+}
+[id^="c6_"]:checked ~ form .payout > div {
+  top: -15vw;
+}
+[id^="c7_"]:checked ~ form .payout > div {
+  top: -18vw;
+}
+[id^="c8_"]:checked ~ form .payout > div {
+  top: -21vw;
+}
+[id^="c9_"]:checked ~ form .payout > div {
+  top: -24vw;
+}
+[id^="c10_"]:checked ~ form .payout > div {
+  top: -27vw;
+}
+[id^="c11_"]:checked ~ form .payout > div {
+  top: -30vw;
+}
+[id^="c12_"]:checked ~ form .payout > div {
+  top: -33vw;
+}
+[id^="c13_"]:checked ~ form .payout > div {
+  top: -36vw;
+}
+[id^="c14_"]:checked ~ form .payout > div {
+  top: -39vw;
+}
+[id^="c15_"]:checked ~ form .payout > div {
+  top: -42vw;
+}
+[id^="c16_"]:checked ~ form .payout > div {
+  top: -45vw;
+}
+[id^="c17_"]:checked ~ form .payout > div {
+  top: -48vw;
+}
+[id^="c18_"]:checked ~ form .payout > div {
+  top: -51vw;
+}
+[id^="c19_"]:checked ~ form .payout > div {
+  top: -54vw;
+}
+[id^="c20_"]:checked ~ form .payout > div {
+  top: -57vw;
+}
+[id^="c21_"]:checked ~ form .payout > div {
+  top: -60vw;
+}
+[id^="c22_"]:checked ~ form .payout > div {
+  top: -63vw;
+}
+[id^="c23_"]:checked ~ form .payout > div {
+  top: -66vw;
+}
+[id^="c24_"]:checked ~ form .payout > div {
+  top: -69vw;
+}
+[id^="c25_"]:checked ~ form .payout > div {
+  top: -72vw;
+}
+[id^="c26_"]:checked ~ form .payout > div {
+  top: -75vw;
+}
+[id^="c27_"]:checked ~ form .payout > div {
+  top: -78vw;
+}
+[id^="c28_"]:checked ~ form .payout > div {
+  top: -81vw;
+}
+[id^="c29_"]:checked ~ form .payout > div {
+  top: -84vw;
+}
+[id^="c30_"]:checked ~ form .payout > div {
+  top: -87vw;
+}
+[id^="c31_"]:checked ~ form .payout > div {
+  top: -90vw;
+}
+[id^="c32_"]:checked ~ form .payout > div {
+  top: -93vw;
+}
+[id^="c33_"]:checked ~ form .payout > div {
+  top: -96vw;
+}
+[id^="c34_"]:checked ~ form .payout > div {
+  top: -99vw;
+}
+[id^="c35_"]:checked ~ form .payout > div {
+  top: -102vw;
+}
+[id^="c36_"]:checked ~ form .payout > div {
+  top: -105vw;
+}
+[id^="c37_"]:checked ~ form .payout > div {
+  top: -108vw;
+}
+[id^="c38_"]:checked ~ form .payout > div {
+  top: -111vw;
+}
+[id^="c39_"]:checked ~ form .payout > div {
+  top: -114vw;
+}
+[id^="c40_"]:checked ~ form .payout > div {
+  top: -117vw;
+}
+[id^="c41_"]:checked ~ form .payout > div {
+  top: -120vw;
+}
+[id^="c42_"]:checked ~ form .payout > div {
+  top: -123vw;
+}
+[id^="c43_"]:checked ~ form .payout > div {
+  top: -126vw;
+}
+[id^="c44_"]:checked ~ form .payout > div {
+  top: -129vw;
+}
+[id^="c45_"]:checked ~ form .payout > div {
+  top: -132vw;
+}
+[id^="c46_"]:checked ~ form .payout > div {
+  top: -135vw;
+}
+[id^="c47_"]:checked ~ form .payout > div {
+  top: -138vw;
+}
+[id^="c48_"]:checked ~ form .payout > div {
+  top: -141vw;
+}
+[id^="c49_"]:checked ~ form .payout > div {
+  top: -144vw;
+}
+[id^="c50_"]:checked ~ form .payout > div {
+  top: -147vw;
+}
+[id^="c51_"]:checked ~ form .payout > div {
+  top: -150vw;
+}
+[id^="c52_"]:checked ~ form .payout > div {
+  top: -153vw;
+}
+[id^="c53_"]:checked ~ form .payout > div {
+  top: -156vw;
+}
+[id^="c54_"]:checked ~ form .payout > div {
+  top: -159vw;
+}
+[id^="c55_"]:checked ~ form .payout > div {
+  top: -162vw;
+}
+[id^="c56_"]:checked ~ form .payout > div {
+  top: -165vw;
+}
+[id^="c57_"]:checked ~ form .payout > div {
+  top: -168vw;
+}
+[id^="c58_"]:checked ~ form .payout > div {
+  top: -171vw;
+}
+[id^="c59_"]:checked ~ form .payout > div {
+  top: -174vw;
+}
+[id^="c60_"]:checked ~ form .payout > div {
+  top: -177vw;
+}
+[id^="c61_"]:checked ~ form .payout > div {
+  top: -180vw;
+}
+[id^="c62_"]:checked ~ form .payout > div {
+  top: -183vw;
+}
+[id^="c63_"]:checked ~ form .payout > div {
+  top: -186vw;
+}
+[id^="c64_"]:checked ~ form .payout > div {
+  top: -189vw;
+}
+[id^="c65_"]:checked ~ form .payout > div {
+  top: -192vw;
+}
+[id^="c66_"]:checked ~ form .payout > div {
+  top: -195vw;
+}
+[id^="c67_"]:checked ~ form .payout > div {
+  top: -198vw;
+}
+[id^="c68_"]:checked ~ form .payout > div {
+  top: -201vw;
+}
+[id^="c69_"]:checked ~ form .payout > div {
+  top: -204vw;
+}
+[id^="c70_"]:checked ~ form .payout > div {
+  top: -207vw;
+}
+[id^="c71_"]:checked ~ form .payout > div {
+  top: -210vw;
+}
+[id^="c72_"]:checked ~ form .payout > div {
+  top: -213vw;
+}
+[id^="c73_"]:checked ~ form .payout > div {
+  top: -216vw;
+}
+[id^="c74_"]:checked ~ form .payout > div {
+  top: -219vw;
+}
+[id^="c75_"]:checked ~ form .payout > div {
+  top: -222vw;
+}
+[id^="c76_"]:checked ~ form .payout > div {
+  top: -225vw;
+}
+[id^="c77_"]:checked ~ form .payout > div {
+  top: -228vw;
+}
+[id^="c78_"]:checked ~ form .payout > div {
+  top: -231vw;
+}
+[id^="c79_"]:checked ~ form .payout > div {
+  top: -234vw;
+}
+[id^="c80_"]:checked ~ form .payout > div {
+  top: -237vw;
+}
+[id^="c81_"]:checked ~ form .payout > div {
+  top: -240vw;
+}
+[id^="c82_"]:checked ~ form .payout > div {
+  top: -243vw;
+}
+[id^="c83_"]:checked ~ form .payout > div {
+  top: -246vw;
+}
+[id^="c84_"]:checked ~ form .payout > div {
+  top: -249vw;
+}
+[id^="c85_"]:checked ~ form .payout > div {
+  top: -252vw;
+}
+[id^="c86_"]:checked ~ form .payout > div {
+  top: -255vw;
+}
+[id^="c87_"]:checked ~ form .payout > div {
+  top: -258vw;
+}
+[id^="c88_"]:checked ~ form .payout > div {
+  top: -261vw;
+}
+[id^="c89_"]:checked ~ form .payout > div {
+  top: -264vw;
+}
+[id^="c90_"]:checked ~ form .payout > div {
+  top: -267vw;
+}
+[id^="c91_"]:checked ~ form .payout > div {
+  top: -270vw;
+}
+[id^="c92_"]:checked ~ form .payout > div {
+  top: -273vw;
+}
+[id^="c93_"]:checked ~ form .payout > div {
+  top: -276vw;
+}
+[id^="c94_"]:checked ~ form .payout > div {
+  top: -279vw;
+}
+[id^="c95_"]:checked ~ form .payout > div {
+  top: -282vw;
+}
+[id^="c96_"]:checked ~ form .payout > div {
+  top: -285vw;
+}
+[id^="c97_"]:checked ~ form .payout > div {
+  top: -288vw;
+}
+[id^="c98_"]:checked ~ form .payout > div {
+  top: -291vw;
+}
+[id^="c99_"]:checked ~ form .payout > div {
+  top: -294vw;
+}
+#s-0-:checked ~ [id^="n0_"]:checked ~ .payout > div,
+#s-1-:checked ~ [id^="n1_"]:checked ~ .payout > div,
+#s-2-:checked ~ [id^="n2_"]:checked ~ .payout > div,
+#s-3-:checked ~ [id^="n3_"]:checked ~ .payout > div,
+#s-4-:checked ~ [id^="n4_"]:checked ~ .payout > div,
+#s-5-:checked ~ [id^="n5_"]:checked ~ .payout > div,
+#s-6-:checked ~ [id^="n6_"]:checked ~ .payout > div,
+#s-7-:checked ~ [id^="n7_"]:checked ~ .payout > div,
+#s-8-:checked ~ [id^="n8_"]:checked ~ .payout > div,
+#s-9-:checked ~ [id^="n9_"]:checked ~ .payout > div,
+#s-10-:checked ~ [id^="n10_"]:checked ~ .payout > div,
+#s-11-:checked ~ [id^="n11_"]:checked ~ .payout > div,
+#s-12-:checked ~ [id^="n12_"]:checked ~ .payout > div,
+#s-13-:checked ~ [id^="n13_"]:checked ~ .payout > div,
+#s-14-:checked ~ [id^="n14_"]:checked ~ .payout > div,
+#s-15-:checked ~ [id^="n15_"]:checked ~ .payout > div,
+#s-16-:checked ~ [id^="n16_"]:checked ~ .payout > div,
+#s-17-:checked ~ [id^="n17_"]:checked ~ .payout > div,
+#s-18-:checked ~ [id^="n18_"]:checked ~ .payout > div,
+#s-19-:checked ~ [id^="n19_"]:checked ~ .payout > div,
+#s-20-:checked ~ [id^="n20_"]:checked ~ .payout > div,
+#s-21-:checked ~ [id^="n21_"]:checked ~ .payout > div,
+#s-22-:checked ~ [id^="n22_"]:checked ~ .payout > div,
+#s-23-:checked ~ [id^="n23_"]:checked ~ .payout > div,
+#s-24-:checked ~ [id^="n24_"]:checked ~ .payout > div,
+#s-25-:checked ~ [id^="n25_"]:checked ~ .payout > div,
+#s-26-:checked ~ [id^="n26_"]:checked ~ .payout > div,
+#s-27-:checked ~ [id^="n27_"]:checked ~ .payout > div,
+#s-28-:checked ~ [id^="n28_"]:checked ~ .payout > div,
+#s-29-:checked ~ [id^="n29_"]:checked ~ .payout > div,
+#s-30-:checked ~ [id^="n30_"]:checked ~ .payout > div,
+#s-31-:checked ~ [id^="n31_"]:checked ~ .payout > div,
+#s-32-:checked ~ [id^="n32_"]:checked ~ .payout > div,
+#s-33-:checked ~ [id^="n33_"]:checked ~ .payout > div,
+#s-34-:checked ~ [id^="n34_"]:checked ~ .payout > div,
+#s-35-:checked ~ [id^="n35_"]:checked ~ .payout > div,
+#s-36-:checked ~ [id^="n36_"]:checked ~ .payout > div {
+  left: -80vw;
+}
+[id^="p-"][id*="-1-"]:checked ~ [id^="n1_"]:checked ~ .payout > div,
+[id^="p-"][id*="-2-"]:checked ~ [id^="n2_"]:checked ~ .payout > div,
+[id^="p-"][id*="-3-"]:checked ~ [id^="n3_"]:checked ~ .payout > div,
+[id^="p-"][id*="-4-"]:checked ~ [id^="n4_"]:checked ~ .payout > div,
+[id^="p-"][id*="-5-"]:checked ~ [id^="n5_"]:checked ~ .payout > div,
+[id^="p-"][id*="-6-"]:checked ~ [id^="n6_"]:checked ~ .payout > div,
+[id^="p-"][id*="-7-"]:checked ~ [id^="n7_"]:checked ~ .payout > div,
+[id^="p-"][id*="-8-"]:checked ~ [id^="n8_"]:checked ~ .payout > div,
+[id^="p-"][id*="-9-"]:checked ~ [id^="n9_"]:checked ~ .payout > div,
+[id^="p-"][id*="-10-"]:checked ~ [id^="n10_"]:checked ~ .payout > div,
+[id^="p-"][id*="-11-"]:checked ~ [id^="n11_"]:checked ~ .payout > div,
+[id^="p-"][id*="-12-"]:checked ~ [id^="n12_"]:checked ~ .payout > div,
+[id^="p-"][id*="-13-"]:checked ~ [id^="n13_"]:checked ~ .payout > div,
+[id^="p-"][id*="-14-"]:checked ~ [id^="n14_"]:checked ~ .payout > div,
+[id^="p-"][id*="-15-"]:checked ~ [id^="n15_"]:checked ~ .payout > div,
+[id^="p-"][id*="-16-"]:checked ~ [id^="n16_"]:checked ~ .payout > div,
+[id^="p-"][id*="-17-"]:checked ~ [id^="n17_"]:checked ~ .payout > div,
+[id^="p-"][id*="-18-"]:checked ~ [id^="n18_"]:checked ~ .payout > div,
+[id^="p-"][id*="-19-"]:checked ~ [id^="n19_"]:checked ~ .payout > div,
+[id^="p-"][id*="-20-"]:checked ~ [id^="n20_"]:checked ~ .payout > div,
+[id^="p-"][id*="-21-"]:checked ~ [id^="n21_"]:checked ~ .payout > div,
+[id^="p-"][id*="-22-"]:checked ~ [id^="n22_"]:checked ~ .payout > div,
+[id^="p-"][id*="-23-"]:checked ~ [id^="n23_"]:checked ~ .payout > div,
+[id^="p-"][id*="-24-"]:checked ~ [id^="n24_"]:checked ~ .payout > div,
+[id^="p-"][id*="-25-"]:checked ~ [id^="n25_"]:checked ~ .payout > div,
+[id^="p-"][id*="-26-"]:checked ~ [id^="n26_"]:checked ~ .payout > div,
+[id^="p-"][id*="-27-"]:checked ~ [id^="n27_"]:checked ~ .payout > div,
+[id^="p-"][id*="-28-"]:checked ~ [id^="n28_"]:checked ~ .payout > div,
+[id^="p-"][id*="-29-"]:checked ~ [id^="n29_"]:checked ~ .payout > div,
+[id^="p-"][id*="-30-"]:checked ~ [id^="n30_"]:checked ~ .payout > div,
+[id^="p-"][id*="-31-"]:checked ~ [id^="n31_"]:checked ~ .payout > div,
+[id^="p-"][id*="-32-"]:checked ~ [id^="n32_"]:checked ~ .payout > div,
+[id^="p-"][id*="-33-"]:checked ~ [id^="n33_"]:checked ~ .payout > div,
+[id^="p-"][id*="-34-"]:checked ~ [id^="n34_"]:checked ~ .payout > div,
+[id^="p-"][id*="-35-"]:checked ~ [id^="n35_"]:checked ~ .payout > div,
+[id^="p-"][id*="-36-"]:checked ~ [id^="n36_"]:checked ~ .payout > div {
+  left: -70vw;
+}
+[id^="t-"][id*="-1-"]:checked ~ [id^="n1_"]:checked ~ .payout > div,
+[id^="t-"][id*="-2-"]:checked ~ [id^="n2_"]:checked ~ .payout > div,
+[id^="t-"][id*="-3-"]:checked ~ [id^="n3_"]:checked ~ .payout > div,
+[id^="t-"][id*="-4-"]:checked ~ [id^="n4_"]:checked ~ .payout > div,
+[id^="t-"][id*="-5-"]:checked ~ [id^="n5_"]:checked ~ .payout > div,
+[id^="t-"][id*="-6-"]:checked ~ [id^="n6_"]:checked ~ .payout > div,
+[id^="t-"][id*="-7-"]:checked ~ [id^="n7_"]:checked ~ .payout > div,
+[id^="t-"][id*="-8-"]:checked ~ [id^="n8_"]:checked ~ .payout > div,
+[id^="t-"][id*="-9-"]:checked ~ [id^="n9_"]:checked ~ .payout > div,
+[id^="t-"][id*="-10-"]:checked ~ [id^="n10_"]:checked ~ .payout > div,
+[id^="t-"][id*="-11-"]:checked ~ [id^="n11_"]:checked ~ .payout > div,
+[id^="t-"][id*="-12-"]:checked ~ [id^="n12_"]:checked ~ .payout > div,
+[id^="t-"][id*="-13-"]:checked ~ [id^="n13_"]:checked ~ .payout > div,
+[id^="t-"][id*="-14-"]:checked ~ [id^="n14_"]:checked ~ .payout > div,
+[id^="t-"][id*="-15-"]:checked ~ [id^="n15_"]:checked ~ .payout > div,
+[id^="t-"][id*="-16-"]:checked ~ [id^="n16_"]:checked ~ .payout > div,
+[id^="t-"][id*="-17-"]:checked ~ [id^="n17_"]:checked ~ .payout > div,
+[id^="t-"][id*="-18-"]:checked ~ [id^="n18_"]:checked ~ .payout > div,
+[id^="t-"][id*="-19-"]:checked ~ [id^="n19_"]:checked ~ .payout > div,
+[id^="t-"][id*="-20-"]:checked ~ [id^="n20_"]:checked ~ .payout > div,
+[id^="t-"][id*="-21-"]:checked ~ [id^="n21_"]:checked ~ .payout > div,
+[id^="t-"][id*="-22-"]:checked ~ [id^="n22_"]:checked ~ .payout > div,
+[id^="t-"][id*="-23-"]:checked ~ [id^="n23_"]:checked ~ .payout > div,
+[id^="t-"][id*="-24-"]:checked ~ [id^="n24_"]:checked ~ .payout > div,
+[id^="t-"][id*="-25-"]:checked ~ [id^="n25_"]:checked ~ .payout > div,
+[id^="t-"][id*="-26-"]:checked ~ [id^="n26_"]:checked ~ .payout > div,
+[id^="t-"][id*="-27-"]:checked ~ [id^="n27_"]:checked ~ .payout > div,
+[id^="t-"][id*="-28-"]:checked ~ [id^="n28_"]:checked ~ .payout > div,
+[id^="t-"][id*="-29-"]:checked ~ [id^="n29_"]:checked ~ .payout > div,
+[id^="t-"][id*="-30-"]:checked ~ [id^="n30_"]:checked ~ .payout > div,
+[id^="t-"][id*="-31-"]:checked ~ [id^="n31_"]:checked ~ .payout > div,
+[id^="t-"][id*="-32-"]:checked ~ [id^="n32_"]:checked ~ .payout > div,
+[id^="t-"][id*="-33-"]:checked ~ [id^="n33_"]:checked ~ .payout > div,
+[id^="t-"][id*="-34-"]:checked ~ [id^="n34_"]:checked ~ .payout > div,
+[id^="t-"][id*="-35-"]:checked ~ [id^="n35_"]:checked ~ .payout > div,
+[id^="t-"][id*="-36-"]:checked ~ [id^="n36_"]:checked ~ .payout > div {
+  left: -60vw;
+}
+[id^="q-"][id*="-1-"]:checked ~ [id^="n1_"]:checked ~ .payout > div,
+[id^="q-"][id*="-2-"]:checked ~ [id^="n2_"]:checked ~ .payout > div,
+[id^="q-"][id*="-3-"]:checked ~ [id^="n3_"]:checked ~ .payout > div,
+[id^="q-"][id*="-4-"]:checked ~ [id^="n4_"]:checked ~ .payout > div,
+[id^="q-"][id*="-5-"]:checked ~ [id^="n5_"]:checked ~ .payout > div,
+[id^="q-"][id*="-6-"]:checked ~ [id^="n6_"]:checked ~ .payout > div,
+[id^="q-"][id*="-7-"]:checked ~ [id^="n7_"]:checked ~ .payout > div,
+[id^="q-"][id*="-8-"]:checked ~ [id^="n8_"]:checked ~ .payout > div,
+[id^="q-"][id*="-9-"]:checked ~ [id^="n9_"]:checked ~ .payout > div,
+[id^="q-"][id*="-10-"]:checked ~ [id^="n10_"]:checked ~ .payout > div,
+[id^="q-"][id*="-11-"]:checked ~ [id^="n11_"]:checked ~ .payout > div,
+[id^="q-"][id*="-12-"]:checked ~ [id^="n12_"]:checked ~ .payout > div,
+[id^="q-"][id*="-13-"]:checked ~ [id^="n13_"]:checked ~ .payout > div,
+[id^="q-"][id*="-14-"]:checked ~ [id^="n14_"]:checked ~ .payout > div,
+[id^="q-"][id*="-15-"]:checked ~ [id^="n15_"]:checked ~ .payout > div,
+[id^="q-"][id*="-16-"]:checked ~ [id^="n16_"]:checked ~ .payout > div,
+[id^="q-"][id*="-17-"]:checked ~ [id^="n17_"]:checked ~ .payout > div,
+[id^="q-"][id*="-18-"]:checked ~ [id^="n18_"]:checked ~ .payout > div,
+[id^="q-"][id*="-19-"]:checked ~ [id^="n19_"]:checked ~ .payout > div,
+[id^="q-"][id*="-20-"]:checked ~ [id^="n20_"]:checked ~ .payout > div,
+[id^="q-"][id*="-21-"]:checked ~ [id^="n21_"]:checked ~ .payout > div,
+[id^="q-"][id*="-22-"]:checked ~ [id^="n22_"]:checked ~ .payout > div,
+[id^="q-"][id*="-23-"]:checked ~ [id^="n23_"]:checked ~ .payout > div,
+[id^="q-"][id*="-24-"]:checked ~ [id^="n24_"]:checked ~ .payout > div,
+[id^="q-"][id*="-25-"]:checked ~ [id^="n25_"]:checked ~ .payout > div,
+[id^="q-"][id*="-26-"]:checked ~ [id^="n26_"]:checked ~ .payout > div,
+[id^="q-"][id*="-27-"]:checked ~ [id^="n27_"]:checked ~ .payout > div,
+[id^="q-"][id*="-28-"]:checked ~ [id^="n28_"]:checked ~ .payout > div,
+[id^="q-"][id*="-29-"]:checked ~ [id^="n29_"]:checked ~ .payout > div,
+[id^="q-"][id*="-30-"]:checked ~ [id^="n30_"]:checked ~ .payout > div,
+[id^="q-"][id*="-31-"]:checked ~ [id^="n31_"]:checked ~ .payout > div,
+[id^="q-"][id*="-32-"]:checked ~ [id^="n32_"]:checked ~ .payout > div,
+[id^="q-"][id*="-33-"]:checked ~ [id^="n33_"]:checked ~ .payout > div,
+[id^="q-"][id*="-34-"]:checked ~ [id^="n34_"]:checked ~ .payout > div,
+[id^="q-"][id*="-35-"]:checked ~ [id^="n35_"]:checked ~ .payout > div,
+[id^="q-"][id*="-36-"]:checked ~ [id^="n36_"]:checked ~ .payout > div {
+  left: -50vw;
+}
+#b-0-1-2-3-:checked ~ [id^="n0_"]:checked ~ .payout > div,
+#b-0-1-2-3-:checked ~ [id^="n1_"]:checked ~ .payout > div,
+#b-0-1-2-3-:checked ~ [id^="n2_"]:checked ~ .payout > div,
+#b-0-1-2-3-:checked ~ [id^="n3_"]:checked ~ .payout > div {
+  left: -40vw;
+}
+[id^="d-"][id*="-1-"]:checked ~ [id^="n1_"]:checked ~ .payout > div,
+[id^="d-"][id*="-2-"]:checked ~ [id^="n2_"]:checked ~ .payout > div,
+[id^="d-"][id*="-3-"]:checked ~ [id^="n3_"]:checked ~ .payout > div,
+[id^="d-"][id*="-4-"]:checked ~ [id^="n4_"]:checked ~ .payout > div,
+[id^="d-"][id*="-5-"]:checked ~ [id^="n5_"]:checked ~ .payout > div,
+[id^="d-"][id*="-6-"]:checked ~ [id^="n6_"]:checked ~ .payout > div,
+[id^="d-"][id*="-7-"]:checked ~ [id^="n7_"]:checked ~ .payout > div,
+[id^="d-"][id*="-8-"]:checked ~ [id^="n8_"]:checked ~ .payout > div,
+[id^="d-"][id*="-9-"]:checked ~ [id^="n9_"]:checked ~ .payout > div,
+[id^="d-"][id*="-10-"]:checked ~ [id^="n10_"]:checked ~ .payout > div,
+[id^="d-"][id*="-11-"]:checked ~ [id^="n11_"]:checked ~ .payout > div,
+[id^="d-"][id*="-12-"]:checked ~ [id^="n12_"]:checked ~ .payout > div,
+[id^="d-"][id*="-13-"]:checked ~ [id^="n13_"]:checked ~ .payout > div,
+[id^="d-"][id*="-14-"]:checked ~ [id^="n14_"]:checked ~ .payout > div,
+[id^="d-"][id*="-15-"]:checked ~ [id^="n15_"]:checked ~ .payout > div,
+[id^="d-"][id*="-16-"]:checked ~ [id^="n16_"]:checked ~ .payout > div,
+[id^="d-"][id*="-17-"]:checked ~ [id^="n17_"]:checked ~ .payout > div,
+[id^="d-"][id*="-18-"]:checked ~ [id^="n18_"]:checked ~ .payout > div,
+[id^="d-"][id*="-19-"]:checked ~ [id^="n19_"]:checked ~ .payout > div,
+[id^="d-"][id*="-20-"]:checked ~ [id^="n20_"]:checked ~ .payout > div,
+[id^="d-"][id*="-21-"]:checked ~ [id^="n21_"]:checked ~ .payout > div,
+[id^="d-"][id*="-22-"]:checked ~ [id^="n22_"]:checked ~ .payout > div,
+[id^="d-"][id*="-23-"]:checked ~ [id^="n23_"]:checked ~ .payout > div,
+[id^="d-"][id*="-24-"]:checked ~ [id^="n24_"]:checked ~ .payout > div,
+[id^="d-"][id*="-25-"]:checked ~ [id^="n25_"]:checked ~ .payout > div,
+[id^="d-"][id*="-26-"]:checked ~ [id^="n26_"]:checked ~ .payout > div,
+[id^="d-"][id*="-27-"]:checked ~ [id^="n27_"]:checked ~ .payout > div,
+[id^="d-"][id*="-28-"]:checked ~ [id^="n28_"]:checked ~ .payout > div,
+[id^="d-"][id*="-29-"]:checked ~ [id^="n29_"]:checked ~ .payout > div,
+[id^="d-"][id*="-30-"]:checked ~ [id^="n30_"]:checked ~ .payout > div,
+[id^="d-"][id*="-31-"]:checked ~ [id^="n31_"]:checked ~ .payout > div,
+[id^="d-"][id*="-32-"]:checked ~ [id^="n32_"]:checked ~ .payout > div,
+[id^="d-"][id*="-33-"]:checked ~ [id^="n33_"]:checked ~ .payout > div,
+[id^="d-"][id*="-34-"]:checked ~ [id^="n34_"]:checked ~ .payout > div,
+[id^="d-"][id*="-35-"]:checked ~ [id^="n35_"]:checked ~ .payout > div,
+[id^="d-"][id*="-36-"]:checked ~ [id^="n36_"]:checked ~ .payout > div {
+  left: -30vw;
+}
+#l-3-6-9-12-15-18-21-24-27-30-33-36-:checked
+  ~ [name="numbers"]:nth-of-type(3n):nth-of-type(n + 157):nth-of-type(-n
+    + 192):checked
+  ~ .payout
+  > div,
+#l-2-5-8-11-14-17-20-23-26-29-32-35-:checked
+  ~ [name="numbers"]:nth-of-type(3n + 2):nth-of-type(n + 157):nth-of-type(-n
+    + 192):checked
+  ~ .payout
+  > div,
+#l-1-4-7-10-13-16-19-22-25-28-31-34-:checked
+  ~ [name="numbers"]:nth-of-type(3n + 1):nth-of-type(n + 157):nth-of-type(-n
+    + 192):checked
+  ~ .payout
+  > div,
+#l-3-6-9-12-15-18-21-24-27-30-33-36-:checked
+  ~ [name="numbers"]:nth-of-type(3n + 1):nth-of-type(n + 194):nth-of-type(-n
+    + 229):checked
+  ~ .payout
+  > div,
+#l-2-5-8-11-14-17-20-23-26-29-32-35-:checked
+  ~ [name="numbers"]:nth-of-type(3n):nth-of-type(n + 194):nth-of-type(-n
+    + 229):checked
+  ~ .payout
+  > div,
+#l-1-4-7-10-13-16-19-22-25-28-31-34-:checked
+  ~ [name="numbers"]:nth-of-type(3n + 2):nth-of-type(n + 194):nth-of-type(-n
+    + 229):checked
+  ~ .payout
+  > div,
+#z-1-2-3-4-5-6-7-8-9-10-11-12-:checked
+  ~ [name="numbers"]:nth-of-type(n + 157):nth-of-type(-n + 168):checked
+  ~ .payout
+  > div,
+#z-13-14-15-16-17-18-19-20-21-22-23-24-:checked
+  ~ [name="numbers"]:nth-of-type(n + 169):nth-of-type(-n + 180):checked
+  ~ .payout
+  > div,
+#z-25-26-27-28-29-30-31-32-33-34-35-36-:checked
+  ~ [name="numbers"]:nth-of-type(n + 181):nth-of-type(-n + 192):checked
+  ~ .payout
+  > div,
+#z-1-2-3-4-5-6-7-8-9-10-11-12-:checked
+  ~ [name="numbers"]:nth-of-type(n + 194):nth-of-type(-n + 205):checked
+  ~ .payout
+  > div,
+#z-13-14-15-16-17-18-19-20-21-22-23-24-:checked
+  ~ [name="numbers"]:nth-of-type(n + 206):nth-of-type(-n + 217):checked
+  ~ .payout
+  > div,
+#z-25-26-27-28-29-30-31-32-33-34-35-36-:checked
+  ~ [name="numbers"]:nth-of-type(n + 218):nth-of-type(-n + 229):checked
+  ~ .payout
+  > div {
+  left: -20vw;
+}
+[id^="red"]:checked ~ [id^="n3_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n9_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n12_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n18_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n21_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n27_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n30_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n36_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n5_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n14_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n23_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n32_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n1_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n7_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n16_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n19_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n25_"]:checked ~ .payout > div,
+[id^="red"]:checked ~ [id^="n34_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n6_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n15_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n24_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n33_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n2_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n8_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n11_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n17_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n20_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n26_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n29_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n35_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n4_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n10_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n13_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n22_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n28_"]:checked ~ .payout > div,
+[id^="black"]:checked ~ [id^="n31_"]:checked ~ .payout > div,
+[id^="odd"]:checked
+  ~ [name="numbers"]:nth-of-type(2n + 1):nth-of-type(n + 157):nth-of-type(-n
+    + 192):checked
+  ~ .payout
+  > div,
+[id^="odd"]:checked
+  ~ [name="numbers"]:nth-of-type(2n):nth-of-type(n + 194):checked
+  ~ .payout
+  > div,
+[id^="even"]:checked
+  ~ [name="numbers"]:nth-of-type(2n):nth-of-type(n + 157):nth-of-type(-n
+    + 192):checked
+  ~ .payout
+  > div,
+[id^="even"]:checked
+  ~ [name="numbers"]:nth-of-type(2n + 1):nth-of-type(n + 194):checked
+  ~ .payout
+  > div,
+#h-1-2-3-4-5-6-7-8-9-10-11-12-13-14-15-16-17-18-:checked
+  ~ [name="numbers"]:nth-of-type(n + 155):nth-of-type(-n + 173):checked
+  ~ .payout
+  > div,
+#h-19-20-21-22-23-24-25-26-27-28-29-30-31-32-33-34-35-36-:checked
+  ~ [name="numbers"]:nth-of-type(n + 174):checked
+  ~ .payout
+  > div {
+  left: -10vw;
+}
+[id*="-0-"]:checked ~ [id^="n0_"]:checked ~ .payout:before,
+[id*="-1-"]:checked ~ [id^="n1_"]:checked ~ .payout:before,
+[id*="-2-"]:checked ~ [id^="n2_"]:checked ~ .payout:before,
+[id*="-3-"]:checked ~ [id^="n3_"]:checked ~ .payout:before,
+[id*="-4-"]:checked ~ [id^="n4_"]:checked ~ .payout:before,
+[id*="-5-"]:checked ~ [id^="n5_"]:checked ~ .payout:before,
+[id*="-6-"]:checked ~ [id^="n6_"]:checked ~ .payout:before,
+[id*="-7-"]:checked ~ [id^="n7_"]:checked ~ .payout:before,
+[id*="-8-"]:checked ~ [id^="n8_"]:checked ~ .payout:before,
+[id*="-9-"]:checked ~ [id^="n9_"]:checked ~ .payout:before,
+[id*="-10-"]:checked ~ [id^="n10_"]:checked ~ .payout:before,
+[id*="-11-"]:checked ~ [id^="n11_"]:checked ~ .payout:before,
+[id*="-12-"]:checked ~ [id^="n12_"]:checked ~ .payout:before,
+[id*="-13-"]:checked ~ [id^="n13_"]:checked ~ .payout:before,
+[id*="-14-"]:checked ~ [id^="n14_"]:checked ~ .payout:before,
+[id*="-15-"]:checked ~ [id^="n15_"]:checked ~ .payout:before,
+[id*="-16-"]:checked ~ [id^="n16_"]:checked ~ .payout:before,
+[id*="-17-"]:checked ~ [id^="n17_"]:checked ~ .payout:before,
+[id*="-18-"]:checked ~ [id^="n18_"]:checked ~ .payout:before,
+[id*="-19-"]:checked ~ [id^="n19_"]:checked ~ .payout:before,
+[id*="-20-"]:checked ~ [id^="n10_"]:checked ~ .payout:before,
+[id*="-21-"]:checked ~ [id^="n21_"]:checked ~ .payout:before,
+[id*="-22-"]:checked ~ [id^="n22_"]:checked ~ .payout:before,
+[id*="-23-"]:checked ~ [id^="n23_"]:checked ~ .payout:before,
+[id*="-24-"]:checked ~ [id^="n24_"]:checked ~ .payout:before,
+[id*="-25-"]:checked ~ [id^="n25_"]:checked ~ .payout:before,
+[id*="-26-"]:checked ~ [id^="n26_"]:checked ~ .payout:before,
+[id*="-27-"]:checked ~ [id^="n27_"]:checked ~ .payout:before,
+[id*="-28-"]:checked ~ [id^="n28_"]:checked ~ .payout:before,
+[id*="-29-"]:checked ~ [id^="n29_"]:checked ~ .payout:before,
+[id*="-30-"]:checked ~ [id^="n30_"]:checked ~ .payout:before,
+[id*="-31-"]:checked ~ [id^="n31_"]:checked ~ .payout:before,
+[id*="-32-"]:checked ~ [id^="n32_"]:checked ~ .payout:before,
+[id*="-33-"]:checked ~ [id^="n33_"]:checked ~ .payout:before,
+[id*="-34-"]:checked ~ [id^="n34_"]:checked ~ .payout:before,
+[id*="-35-"]:checked ~ [id^="n35_"]:checked ~ .payout:before,
+[id*="-36-"]:checked ~ [id^="n36_"]:checked ~ .payout:before {
+  content: "You Won";
+}
+.cash:after {
+  padding-left: 10px;
+}
+[for="reset"] {
+  visibility: hidden;
+  top: 10vw;
+  left: 45vw;
+}
+[id$="_1"]:checked ~ form [id$="_2"]:checked ~ [for="reset"],
+[id$="_2"]:checked ~ form [id$="_1"]:checked ~ [for="reset"] {
+  visibility: visible;
+}
+.ending {
+  visibility: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.75);
+}
+.ending:before {
+  content: "Unlucky";
+  display: block;
+  position: relative;
+  top: 2vw;
+  width: 100%;
+  margin: 0;
+  padding: 1vw 0 1vw;
+  font-size: 5vw;
+  color: white;
+  text-align: center;
+  background: red;
+}
+[id^="c0_"]:checked ~ .ending,
+[id^="c100_"]:checked ~ .ending {
+  visibility: visible;
+}
+[id^="c100_"]:checked ~ .ending:before {
+  background: black;
+}
+[id^="c100_"]:checked ~ .ending:before {
+  content: "Congratulations";
+}
+.ending label {
+  position: absolute;
+  top: 11vw;
+  left: 50%;
+  width: 14vw;
+  transform: translateX(-50%);
+}
+#c0_1:checked ~ .ending [for="c50_1"],
+#c100_1:checked ~ .ending [for="c50_1"],
+#c0_2:checked ~ .ending [for="c50_2"],
+#c100_2:checked ~ .ending [for="c50_2"] {
+  visibility: visible;
+}

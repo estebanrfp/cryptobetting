@@ -1,0 +1,80 @@
+<div class="scene">
+	<div class="cube">
+		<nav class="steps">
+			<div class="dot step_1 done"></div>
+			<div class="dot step_2"></div>
+			<div class="dot step_3"></div>
+			<div class="dot step_4"></div>
+			<div class="dot step_5"></div>
+			<div class="dot step_6"></div>
+		</nav>
+		<div class="cube__face  cube__face--front" id="step__1">
+			<div class="container">
+				<input type="text" class="label" placeholder="Elige un color" disabled>
+				<div class="radio">
+					<div class="item blue" data-color="blue"></div>
+					<div class="item yellow" data-color="yellow"></div>
+					<div class="item purple" data-color="purple"></div>
+					<div class="item green" data-color="green"></div>
+					<div class="item violet" data-color="violet"></div>
+				</div>
+				<div class="btn" style="display:none">
+					<span data-step="1">Continue</span>
+				</div>
+			</div>
+		</div>
+		<div class="cube__face cube__face--bottom" id="step__2">
+			<div class="container">
+				<input type="text" placeholder="Nombre de usuario">
+				<div class="btn">
+					<span data-step="2">Continue</span>
+				</div>
+			</div>
+		</div>
+		<div class="cube__face" id="step__3">
+			<div class="container">
+				<input type="email" placeholder="Email">
+				<div class="btn">
+					<span data-step="3">Continue</span>
+				</div>
+			</div>
+		</div>
+		<div class="cube__face" id="step__4">
+			<div class="container">
+				<input type="password" placeholder="Password (at least 4 chars)">
+				<div class="btn">
+					<span data-step="4">Continue</span>
+				</div>
+			</div>
+		</div>
+		<div class="cube__face" id="step__5">
+			<div class="container">
+				<select name="fav_color" id="fav_color">
+                    <option disabled selected>Seleccione su juego favorito</option>
+                    <option value="Leo">Ruleta</option>
+                    <option value="Mikey">Mikey</option>
+                    <option value="Donnie">Donnie</option>
+                    <option value="Raph">Raph</option>
+                </select>
+				<div class="btn">
+					<span data-step="5">Continuar</span>
+				</div>
+			</div>
+		</div>
+		<div class="cube__face" id="step__6">
+			<div class="container">
+				<input type="text" class="label" placeholder="Are you amazing ?" disabled>
+				<div class="right">
+					<label for="">No</label>
+					<div class="checkbox">
+						<div class="circle"></div>
+					</div>
+					<label for="">Yes</label>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="welcome">
+	<div class="content">Welcome !</div>
+</div>
