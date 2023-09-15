@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta name="viewport"
+    content="width=device-width, height=device-height, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, shrink-to-fit=no" />
+  <meta httpEquiv="Pragma" content="no-cache" />
+  <meta name="robots" content="index,follow" />
+  <title>Crypto Betting</title>
+
+  <link rel="shortcut icon" type="image/png" href="https://desarrolloactivo.ams3.digitaloceanspaces.com/favicon.ico" />
+  <link rel="manifest" href="/manifest.json" />
+</head>
+
+<body>
+  <span id="splash-overlay" class="splash"></span>
+  <span id="welcome" class="z-depth-4"></span>
+
+  <noscript>
+    Debe habilitar JavaScript para ejecutar esta aplicación.
+  </noscript>
+
+  <span class="spinner"></span>
+  <span id="pageMessages"></span>
+  <input id="hamburger" class="hamburger" type="checkbox" />
+  <label for="hamburger" class="hamburger">
+    <i></i>
+    <!-- <text>
+            <close>close</close>
+            <open>menu</open>
+        </text> -->
+  </label>
+  <nav class="primnav">
+    <ul>
+      <li>
+        <a title="Home" href="/welcome" class="spa">
+          <svg class="icon">
+            <use xlink:href="#icon-home"></use>
+          </svg> Home
+        </a>
+      </li>
+      <li>
+        <a title="Todo" href="/roulette" class="spa">
+          <svg class="icon">
+            <use xlink:href="#icon-blog"></use>
+          </svg> Ruleta
+          <div class="tag">53</div>
+        </a>
+        <ul class="secnav">
+          <li>
+            <a title="Inbox" href="/" class="spa">Instrucciones</a>
+          </li>
+          <li>
+            <a title="Sent" href="/" class="spa">Recompensas</a>
+          </li>
+        </ul>
+      </li>
+      <!--
+      <li>
+        <a title="Mail" href="/login" class="spa">
+          <svg class="icon">
+            <use xlink:href="#icon-cart"></use>
+          </svg> Store
+          <div class="tag">53</div>
+        </a>
+
+                <ul class="secnav">
+                    <li>
+                        <a title="Inbox" href="#inbox">Inbox</a>
+                    </li>
+                    <li>
+                        <a title="Sent" href="#sent">Sent</a>
+                    </li>
+                </ul>
+
+      </li>
+      -->
+      <!--
+            <li>
+                <a title="Notifications" href="#notifications">
+                    <svg class="icon">
+                        <use xlink:href="#icon-code"></use>
+                    </svg> Notifications
+                    <div class="tag">17</div>
+                </a>
+            </li>
+            -->
+      <li>
+        <a title="System Administration" href="/login2" class="spa">
+          <svg class="icon">
+            <use xlink:href="#icon-equalizer"></use>
+          </svg> Opciones
+        </a>
+        <ul class="secnav">
+          <li>
+            <a title="Users" href="#users" class="spa">Mi cuenta</a>
+          </li>
+          <li>
+            <a title="Lists" href="#lists" class="spa">Retiro</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!--
+    <user id="user">
+        <section>
+            <img src="https://secure.gravatar.com/avatar/da3a784db378c092132d2452564b4842" />
+            <section>
+                <name>estebanrfp</name>
+                <actions><a href="#settings">settings</a> | <a href="#logout">logout</a></actions>
+            </section>
+        </section>
+    </user>
+    -->
+
+  <content>
+    <nav class="tabs">
+      <ul>
+        <li><a class="tab" href="#" class="spa">item</a></li>
+        <li><a class="tab" href="#" class="spa">item</a></li>
+        <li><a class="tab" href="#" class="spa">item</a></li>
+
+        <li><div id='balance'></div></li>
+      </ul>
+    </nav>
+
+    <div class='Layout'></div>
+    <!--
+        <ul class="features">
+            <li>
+                <svg class="icon">
+                    <use xlink:href="#icon-chrome"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#icon-safari"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#icon-edge"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#icon-firefox"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#icon-IE"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#icon-opera"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#icon-appleinc"></use>
+                </svg>
+                <svg class="icon">
+                    <use xlink:href="#icon-android"></use>
+                </svg>
+            </li>
+        </ul>
+        -->
+  </content>
+
+  <svg style="position: absolute; width: 0; height: 0;" width="0" height="0" version="1.1"
+    xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <defs>
+      <symbol id="icon-expand" viewBox="0 0 27 32">
+        <title>expand</title>
+        <path class="path1"
+          d="M13.482 18.857c0 0.143-0.071 0.304-0.179 0.411l-5.929 5.929 2.571 2.571c0.214 0.214 0.339 0.5 0.339 0.804 0 0.625-0.518 1.143-1.143 1.143h-8c-0.625 0-1.143-0.518-1.143-1.143v-8c0-0.625 0.518-1.143 1.143-1.143 0.304 0 0.589 0.125 0.804 0.339l2.571 2.571 5.929-5.929c0.107-0.107 0.268-0.179 0.411-0.179s0.304 0.071 0.411 0.179l2.036 2.036c0.107 0.107 0.179 0.268 0.179 0.411zM27.429 3.429v8c0 0.625-0.518 1.143-1.143 1.143-0.304 0-0.589-0.125-0.804-0.339l-2.571-2.571-5.929 5.929c-0.107 0.107-0.268 0.179-0.411 0.179s-0.304-0.071-0.411-0.179l-2.036-2.036c-0.107-0.107-0.179-0.268-0.179-0.411s0.071-0.304 0.179-0.411l5.929-5.929-2.571-2.571c-0.214-0.214-0.339-0.5-0.339-0.804 0-0.625 0.518-1.143 1.143-1.143h8c0.625 0 1.143 0.518 1.143 1.143z">
+        </path>
+      </symbol>
+      <symbol id="icon-bell2" viewBox="0 0 32 32">
+        <title>bell2</title>
+        <path class="path1"
+          d="M32.047 25c0-9-8-7-8-14 0-0.58-0.056-1.076-0.158-1.498-0.526-3.532-2.88-6.366-5.93-7.23 0.027-0.123 0.041-0.251 0.041-0.382 0-1.040-0.9-1.891-2-1.891s-2 0.851-2 1.891c0 0.131 0.014 0.258 0.041 0.382-3.421 0.969-5.966 4.416-6.039 8.545-0.001 0.060-0.002 0.121-0.002 0.183 0 7-8 5-8 14 0 2.382 5.331 4.375 12.468 4.878 0.673 1.263 2.002 2.122 3.532 2.122s2.86-0.86 3.532-2.122c7.137-0.503 12.468-2.495 12.468-4.878 0-0.007-0.001-0.014-0.001-0.021l0.048 0.021zM25.82 26.691c-1.695 0.452-3.692 0.777-5.837 0.958-0.178-2.044-1.893-3.648-3.984-3.648s-3.805 1.604-3.984 3.648c-2.144-0.18-4.142-0.506-5.837-0.958-2.332-0.622-3.447-1.318-3.855-1.691 0.408-0.372 1.523-1.068 3.855-1.691 2.712-0.724 6.199-1.122 9.82-1.122s7.109 0.398 9.82 1.122c2.332 0.622 3.447 1.318 3.855 1.691-0.408 0.372-1.523 1.068-3.855 1.691z">
+        </path>
+
+      </symbol>
+      <symbol id="icon-cart" viewBox="0 0 32 32">
+        <title>cart</title>
+        <path class="path1" d="M12 29c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+        <path class="path2" d="M32 29c0 1.657-1.343 3-3 3s-3-1.343-3-3c0-1.657 1.343-3 3-3s3 1.343 3 3z"></path>
+        <path class="path3"
+          d="M32 16v-12h-24c0-1.105-0.895-2-2-2h-6v2h4l1.502 12.877c-0.915 0.733-1.502 1.859-1.502 3.123 0 2.209 1.791 4 4 4h24v-2h-24c-1.105 0-2-0.895-2-2 0-0.007 0-0.014 0-0.020l26-3.98z">
+        </path>
+      </symbol>
+      <symbol id="icon-blog" viewBox="0 0 32 32">
+        <title>blog</title>
+        <path
+          d="M28 8v-4h-28v22c0 1.105 0.895 2 2 2h27c1.657 0 3-1.343 3-3v-17h-4zM26 26h-24v-20h24v20zM4 10h20v2h-20zM16 14h8v2h-8zM16 18h8v2h-8zM16 22h6v2h-6zM4 14h10v10h-10z">
+        </path>
+      </symbol>
+
+      <symbol id="icon-equalizer" viewBox="0 0 32 32">
+        <title>equalizer</title>
+        <path
+          d="M29.181 19.070c-1.679-2.908-0.669-6.634 2.255-8.328l-3.145-5.447c-0.898 0.527-1.943 0.829-3.058 0.829-3.361 0-6.085-2.742-6.085-6.125h-6.289c0.008 1.044-0.252 2.103-0.811 3.070-1.679 2.908-5.411 3.897-8.339 2.211l-3.144 5.447c0.905 0.515 1.689 1.268 2.246 2.234 1.676 2.903 0.672 6.623-2.241 8.319l3.145 5.447c0.895-0.522 1.935-0.82 3.044-0.82 3.35 0 6.067 2.725 6.084 6.092h6.289c-0.003-1.034 0.259-2.080 0.811-3.038 1.676-2.903 5.399-3.894 8.325-2.219l3.145-5.447c-0.899-0.515-1.678-1.266-2.232-2.226zM16 22.479c-3.578 0-6.479-2.901-6.479-6.479s2.901-6.479 6.479-6.479c3.578 0 6.479 2.901 6.479 6.479s-2.901 6.479-6.479 6.479z">
+        </path>
+      </symbol>
+      <symbol id="icon-th-large" viewBox="0 0 30 32">
+        <title>th-large</title>
+        <path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
+      </symbol>
+      <symbol id="icon-home" viewBox="0 0 30 32">
+        <title>th-large</title>
+        <path d="M32 19l-6-6v-9h-4v5l-6-6-16 16v1h4v10h10v-6h4v6h10v-10h4z"></path>
+      </symbol>
+      <symbol id="icon-code" viewBox="0 0 40 32">
+        <title>code</title>
+        <path d="M26 23l3 3 10-10-10-10-3 3 7 7z"></path>
+        <path d="M14 9l-3-3-10 10 10 10 3-3-7-7z"></path>
+        <path d="M21.916 4.704l2.171 0.592-6 22.001-2.171-0.592 6-22.001z"></path>
+      </symbol>
+    </defs>
+  </svg>
+</body>
+
+</html>
